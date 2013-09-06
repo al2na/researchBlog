@@ -2,20 +2,17 @@
 (function(page){
     links <- list(c("/index.html", "Home"),
                   c("/pages/about.html", "About"))
-    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"),
-                     c("http://planet.clojure.in/", "Planet Clojure"),
-                     c("http://planetbigdata.com/", "Planet Big Data"),
-                     c("http://www.statsblogs.com/", "Statsblogs"))
+    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"))
     webdoc("html5",
-           html_head(title = "Example Samatha blog",
+           html_head(title = "Deciphering life: One bit at a time",
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">'),
            html_body(
                m("div.container-fluid well",
-                 m("h1", "Example Samatha blog"),
-                 m("p", "A simple blog site to Illustrate Samatha")),
+                 m("h1", "Deciphering life: One bit at a time"),
+                 m("p", "Robert M Flight's home on the web")),
                m("div.subnav",
                  unordered.list(lapply(links, function(x) link.to(x[1], x[2])),
                                 list.opts = list(class="nav nav-pills"))),

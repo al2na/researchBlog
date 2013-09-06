@@ -1,0 +1,68 @@
+% Samatha, R, tutorial
+
+Using Samatha
+==========
+  
+So I decided to try out David Springates Samatha package for statically building this blog. If you decide to use it, be warned, right now it is a little rough around the edges, and needs some work. David created his own blog using it, and has been using that as a test case. Unfortunately, that has meant that there are bugs that haven't been caught. So we'll hopefully be finding bugs and squashing them.
+
+Installing & Using
+----------
+
+Right now (Sept 6, 2013) the easiest way to use it is by cloning the repo, and then using `devtools` to load the functions:
+
+**Outside of `R`**
+
+```
+git clone https://github.com/DASpringate/samatha.git
+```
+
+**in `R`**
+
+
+```r
+# navigate to samatha directory
+library(devtools)
+load_all(".")
+```
+
+
+
+Setting Up
+----------
+
+To set up a site, David has helpfully created two functions, `skeleton` and `setup_example_site` to essentially instantiate a fully functional site with a first post, etc.
+
+
+```r
+site <- "dirToHoldBlog"
+skeleton(site)
+setup_example_site(site)
+
+samatha(site, rss = FALSE, initial = T)
+samatha(site, rss = FALSE, initial = T)
+```
+
+
+This is nice, because some of the way the site works were not quite intuitive to me, and it wasn't clear from his own setup where everything went. So starting from this site, it gets a little clearer how everything works, and then subsequently start modifying things.
+
+Posts
+-------
+
+Posts are kept in the `template/posts` directory.
+
+Changes
+---------
+
+The first things you will definitely want to change are in the `template/layouts/default_template.R` to reflect the title of your actual blog, and the links.
+
+Themes
+-----------
+
+Haven't quite figured this out yet. Will update when I do.
+
+Bugs
+---------
+
+  * I haven't got the `RSS` properly working yet, so I don't know if that is really a bug, but I get an error if I don't call `samatha` with `rss=FALSE`.
+
+  * The index page doesn't update properly when you just have a new post, or change the name of a post. My current workaround is to change something minor on the index page when I want the new post to show up.

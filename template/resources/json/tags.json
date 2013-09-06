@@ -1,14 +1,22 @@
 {
- "R": {
- "titles": "First post",
-"urls": "posts/2013/09/First_post.html" 
+ "moving": {
+ "titles": "Moved!",
+"urls": "posts/2013/09/Moved.html" 
+},
+"R": {
+ "titles": [ "Test post", "Using Samatha" ],
+"urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
 },
 "setup": {
- "titles": "First post",
-"urls": "posts/2013/09/First_post.html" 
+ "titles": "Test post",
+"urls": "posts/2013/09/Test_post.html" 
 },
 "Samatha": {
- "titles": "First post",
-"urls": "posts/2013/09/First_post.html" 
+ "titles": [ "Test post", "Using Samatha" ],
+"urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+},
+"tutorial": {
+ "titles": "Using Samatha",
+"urls": "posts/2013/09/Using_samatha.html" 
 } 
 }

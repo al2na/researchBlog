@@ -1,0 +1,6 @@
+% moving
+
+Moved!
+========
+
+OK, if you can see this, then it is official, my blog has moved to static hosting on github pages. We'll see how this works out!
