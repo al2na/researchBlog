@@ -1,7 +1,6 @@
 % R setup Samatha
 
-Test post
-============
+# Test post
 
 Here is a summary of the `cars` dataset:
 

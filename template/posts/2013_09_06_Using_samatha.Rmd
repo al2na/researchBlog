@@ -1,12 +1,10 @@
 % Samatha, R, tutorial
 
-Using Samatha
-==========
+# Using Samatha
   
 So I decided to try out David Springates Samatha package for statically building this blog. If you decide to use it, be warned, right now it is a little rough around the edges, and needs some work. David created his own blog using it, and has been using that as a test case. Unfortunately, that has meant that there are bugs that haven't been caught. So we'll hopefully be finding bugs and squashing them.
 
-Installing & Using
-----------
+## Installing & Using
 
 Right now (Sept 6, 2013) the easiest way to use it is by cloning the repo, and then using `devtools` to load the functions:
 
