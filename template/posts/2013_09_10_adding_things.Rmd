@@ -1,4 +1,4 @@
-% samatha, twitter
+% Samatha, twitter
 
 
 # Adding things to the site
