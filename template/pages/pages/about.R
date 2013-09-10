@@ -1,4 +1,4 @@
-layout <- "default_template.R"
+layout <- "default_nocomment_template.R"
 title <- "home"
 
 about.the.blog <- include.markdown(file.path(site, "template/resources/about_blog.md"))
