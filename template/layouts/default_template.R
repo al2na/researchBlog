@@ -2,6 +2,7 @@
 (function(page){
     links <- list(c("/index.html", "Home"),
                   c("/pages/about.html", "About"))
+    twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
     blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"))
     webdoc("html5",
            html_head(title = "Deciphering life: One bit at a time",
@@ -21,8 +22,10 @@
                    m("div.span1"),
                    m("div.span9", page),
                    m("div.span2",
+                     twitter,
                      m("h3", "Tags"),
-                     html.taglist(site),m("h3", "Blogs"),
+                     html.taglist(site),
+                     m("h3", "Blogs"),
                      unordered.list(lapply(blogroll, function(x) link.to(x[1], x[2]))))),
                  m("div.span12",
                    m("div.span2"),

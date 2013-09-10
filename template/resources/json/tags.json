@@ -1,22 +1,22 @@
 {
  "moving": {
- "titles": "Moved!",
+ "titles": "Moved!\r",
 "urls": "posts/2013/09/Moved.html" 
 },
 "R": {
- "titles": [ "Test post", "Using Samatha" ],
+ "titles": [ "Test post\r", "Using Samatha\r" ],
 "urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
 },
 "setup": {
- "titles": "Test post",
+ "titles": "Test post\r",
 "urls": "posts/2013/09/Test_post.html" 
 },
 "Samatha": {
- "titles": [ "Test post", "Using Samatha" ],
+ "titles": [ "Test post\r", "Using Samatha\r" ],
 "urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
 },
 "tutorial": {
- "titles": "Using Samatha",
+ "titles": "Using Samatha\r",
 "urls": "posts/2013/09/Using_samatha.html" 
 } 
 }
