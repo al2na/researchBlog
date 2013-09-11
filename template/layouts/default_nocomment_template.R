@@ -2,6 +2,7 @@
 (function(page){
     links <- list(c("/index.html", "Home"),
                   c("/pages/about.html", "About"),
+                  c("/pages/archive.html", "Blog Archive"),
                   c("https://github.com/rmflight/researchBlog", "Blog Source"),
                   c("https://github.com/rmflight?tab=repositories", "Github Repos"))
     twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
