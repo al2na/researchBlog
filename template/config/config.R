@@ -9,7 +9,7 @@ rss.categories <- list("R", "data", "bioinformatics", "open science")
 
 ###### tag setup ######
 
-tag.layout = "default_template.R"
+tag.layout = "default_nocomment_template.R"
 
 ###### blog posts ######
 

@@ -36,5 +36,6 @@
                        m("footer.footer",
                        m("p.right back_to_top",
                          link.to("#", "&uArr; Page Top")),
-                       m("p", link.to("https://github.com/DASpringate/samatha", "Built in R with Samatha"))))))))
+                       m("p", link.to("https://github.com/DASpringate/samatha", "Built in R with Samatha")),
+                         m("p", link.to("https://github.com/rmflight/researchBlog", "Blog source code"))))))))
 })(page)

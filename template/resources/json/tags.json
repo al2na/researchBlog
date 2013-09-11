@@ -1,11 +1,39 @@
 {
- "moving": {
- "titles": "Moved!",
-"urls": "posts/2013/09/Moved.html" 
+ "literateprogramming": {
+ "titles": "Writing up scientific results and literate programming",
+"urls": "posts/2013/05/writing_up_results.html" 
+},
+"writing": {
+ "titles": "Writing up scientific results and literate programming",
+"urls": "posts/2013/05/writing_up_results.html" 
 },
 "R": {
- "titles": [ "Test post", "Using Samatha" ],
-"urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+ "titles": [ "R Interface for Teaching", "Test post", "Using Samatha" ],
+"urls": [ "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+},
+"teaching": {
+ "titles": "R Interface for Teaching",
+"urls": "posts/2013/07/rTeachingApp.html" 
+},
+"notebook": {
+ "titles": "R Interface for Teaching",
+"urls": "posts/2013/07/rTeachingApp.html" 
+},
+"ipythonNotebook": {
+ "titles": "R Interface for Teaching",
+"urls": "posts/2013/07/rTeachingApp.html" 
+},
+"openscience": {
+ "titles": "Reproducible Methods",
+"urls": "posts/2013/08/reproducible_methods.html" 
+},
+"reproducibility": {
+ "titles": "Reproducible Methods",
+"urls": "posts/2013/08/reproducible_methods.html" 
+},
+"moving": {
+ "titles": "Moved!",
+"urls": "posts/2013/09/Moved.html" 
 },
 "setup": {
  "titles": "Test post",
