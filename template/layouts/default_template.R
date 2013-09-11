@@ -33,7 +33,7 @@
                m("div.container-fluid",
                  m("div.row-fluid",
                    m("div.span1"),
-                   m("div.span9", page),
+                   m("div.span9", content(page, disqus)),
                    m("div.span2",
                      twitter,
                      m("h3", "Tags"),
