@@ -43,8 +43,6 @@
                  m("div.span12",
                    m("div.span2"),
                      m("div.span8",
-                       m("h3", "Comments"),
-                       disqus,
                        m("footer.footer",
                        m("p.right back_to_top",
                          link.to("#", "&uArr; Page Top")),
