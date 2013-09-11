@@ -21,7 +21,8 @@
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
-                     '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">'),
+                     '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">',
+                     include.textfile(file.path(site, "template", "resources", "html", "analytics.html"))),
            html_body(
                m("div.container-fluid well",
                  m("h1", "Deciphering life: One bit at a time"),
