@@ -1,9 +1,20 @@
 
 (function(page){
     links <- list(c("/index.html", "Home"),
-                  c("/pages/about.html", "About"))
+                  c("/pages/about.html", "About"),
+                  c("https://github.com/rmflight/researchBlog", "Blog Source"),
+                  c("https://github.com/rmflight?tab=repositories", "Github Repos"))
     twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
-    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"))
+    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"),
+                     c("http://ivory.idyll.org/blog/", "Living in an Ivory Basement"),
+                     c("http://bytesizebio.net/", "Byte Size Biology"),
+                     c("http://robjhyndman.com/hyndsight/", "Hyndsight"),
+                     c("http://solomonmessing.wordpress.com/blog/", "Solomon Messing"),
+                     c("http://nsaunders.wordpress.com/", "What You're Doing Is Rather Desperate"),
+                     c("http://yihui.name/en/", "Yihui Xie's Blog"),
+                     c("http://simplystatistics.org/", "Simply Statistics"),
+                     c("http://software-carpentry.org/",
+                       "Software carpentry"))
     webdoc("html5",
            html_head(title = "Deciphering life: One bit at a time",
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
@@ -25,7 +36,7 @@
                      twitter,
                      m("h3", "Tags"),
                      html.taglist(site),
-                     m("h3", "Blogs"),
+                     m("h3", "Blog Roll"),
                      unordered.list(lapply(blogroll, function(x) link.to(x[1], x[2]))))),
                  m("div.span12",
                    m("div.span2"),
