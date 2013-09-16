@@ -1,4 +1,4 @@
-% R, teaching, notebook, ipythonNotebook
+% R, teaching, notebook
 
 # R Interface for Teaching
 

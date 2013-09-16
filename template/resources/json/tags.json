@@ -1,5 +1,17 @@
 {
- "literateprogramming": {
+ "R": {
+ "titles": [ "Hive Plots using R and Cytoscape", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha" ],
+"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+},
+"hiveplot": {
+ "titles": "Hive Plots using R and Cytoscape",
+"urls": "posts/2012/11/hiveplots_example.html" 
+},
+"cytoscape": {
+ "titles": "Hive Plots using R and Cytoscape",
+"urls": "posts/2012/11/hiveplots_example.html" 
+},
+"literateprogramming": {
  "titles": "Writing up scientific results and literate programming",
 "urls": "posts/2013/05/writing_up_results.html" 
 },
@@ -7,19 +19,19 @@
  "titles": "Writing up scientific results and literate programming",
 "urls": "posts/2013/05/writing_up_results.html" 
 },
-"R": {
- "titles": [ "R Interface for Teaching", "Test post", "Using Samatha" ],
-"urls": [ "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+"timhortons": {
+ "titles": "Tim Hortons Density",
+"urls": "posts/2013/06/timmysDensity.html" 
+},
+"mapping": {
+ "titles": "Tim Hortons Density",
+"urls": "posts/2013/06/timmysDensity.html" 
 },
 "teaching": {
  "titles": "R Interface for Teaching",
 "urls": "posts/2013/07/rTeachingApp.html" 
 },
 "notebook": {
- "titles": "R Interface for Teaching",
-"urls": "posts/2013/07/rTeachingApp.html" 
-},
-"ipythonNotebook": {
  "titles": "R Interface for Teaching",
 "urls": "posts/2013/07/rTeachingApp.html" 
 },
@@ -32,8 +44,8 @@
 "urls": "posts/2013/08/reproducible_methods.html" 
 },
 "moving": {
- "titles": "Moved!",
-"urls": "posts/2013/09/Moved.html" 
+ "titles": [ "Moved!", "Difference in posted date vs sessionInfo()" ],
+"urls": [ "posts/2013/09/Moved.html", "posts/2013/09/movingDates.html" ] 
 },
 "setup": {
  "titles": "Test post",
