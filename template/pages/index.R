@@ -18,6 +18,6 @@ print(postmd[1])
 page <- content(include.markdown(postmd[1]),
                 m("h6",
                   link.to(get.postpath(postmd[1]), paste0("Posted on ", postdates[1]))),
-                m("h2", "Older Posts:"),
-               html.postlist(site))
+                m("h2", "Recent Posts:"),
+               html.postlist(site, 5))
  

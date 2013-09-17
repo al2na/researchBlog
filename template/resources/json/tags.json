@@ -1,7 +1,7 @@
 {
  "R": {
- "titles": [ "Hive Plots using R and Cytoscape", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha" ],
-"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
+ "titles": [ "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha" ],
+"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html" ] 
 },
 "hiveplot": {
  "titles": "Hive Plots using R and Cytoscape",
@@ -18,6 +18,10 @@
 "writing": {
  "titles": "Writing up scientific results and literate programming",
 "urls": "posts/2013/05/writing_up_results.html" 
+},
+"package": {
+ "titles": "Storing package data in custom environments",
+"urls": "posts/2013/05/customEnvironments.html" 
 },
 "timhortons": {
  "titles": "Tim Hortons Density",
