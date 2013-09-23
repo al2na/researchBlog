@@ -1,7 +1,7 @@
 {
  "R": {
- "titles": [ "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha", "R, RStudio, and release and dev Bioconductor" ],
-"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html" ] 
+ "titles": [ "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages" ],
+"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html" ] 
 },
 "hiveplot": {
  "titles": "Hive Plots using R and Cytoscape",
@@ -86,5 +86,9 @@
 "science": {
  "titles": "K-12 Wants Scientists!!",
 "urls": "posts/2013/09/postdocAlternatives.html" 
+},
+"packages": {
+ "titles": "Portable, personal packages",
+"urls": "posts/2013/09/github_packages.html" 
 } 
 }
