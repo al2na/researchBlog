@@ -23,6 +23,7 @@
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">',
                      include.textfile(file.path(site, "template", "resources", "html", "analytics.html")),
+                     include.textfile(file.path(site, "template", "resources", "html", "social_sharing.html")),
                      include.textfile(file.path(site, "template", "resources", "html", "r_highlight.html"))),
            html_body(
                m("div.container-fluid well",

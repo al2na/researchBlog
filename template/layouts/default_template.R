@@ -6,6 +6,7 @@
                   c("https://github.com/rmflight/researchBlog", "Blog Source"),
                   c("https://github.com/rmflight?tab=repositories", "Github Repos"))
     twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
+    social <- include.textfile(file.path(site, "template", "resources", "html", "social_widget.html"))
     disqus <- include.textfile(file.path(site, "template", "resources", "html", "disqus.html"))
     blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"),
                      c("http://ivory.idyll.org/blog/", "Living in an Ivory Basement"),
@@ -18,13 +19,14 @@
                      c("http://software-carpentry.org/",
                      "Software carpentry"))
     webdoc("html5",
-           html_head(title = "Deciphering life: One bit at a time",
+           html_head("Deciphering life: One bit at a time",
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">',
                      include.textfile(file.path(site, "template", "resources", "html", "analytics.html")),
-                     include.textfile(file.path(site, "template", "resources", "html", "r_highlight.html"))),
+                     include.textfile(file.path(site, "template", "resources", "html", "r_highlight.html")),
+                     include.textfile(file.path(site, "template", "resources", "html", "social_sharing.html"))),
            html_body(
                m("div.container-fluid well",
                  m("h1", "Deciphering life: One bit at a time"),
@@ -35,7 +37,7 @@
                m("div.container-fluid",
                  m("div.row-fluid",
                    m("div.span1"),
-                   m("div.span9", content(page, disqus)),
+                   m("div.span9", content(page, social, disqus)),
                    m("div.span2",
                      twitter,
                      m("h3", "Tags"),
