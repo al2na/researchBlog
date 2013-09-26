@@ -1,7 +1,23 @@
 {
  "R": {
- "titles": [ "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages" ],
-"urls": [ "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html" ] 
+ "titles": [ "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Test post", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html" ] 
+},
+"openscience": {
+ "titles": [ "Writing papers using R Markdown", "Reproducible Methods" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html" ] 
+},
+"reproducibility": {
+ "titles": [ "Writing papers using R Markdown", "Reproducible Methods" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html" ] 
+},
+"tutorial": {
+ "titles": [ "Writing papers using R Markdown", "Using Samatha" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/09/Using_samatha.html" ] 
+},
+"science": {
+ "titles": [ "Writing papers using R Markdown", "K-12 Wants Scientists!!" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/09/postdocAlternatives.html" ] 
 },
 "hiveplot": {
  "titles": "Hive Plots using R and Cytoscape",
@@ -39,14 +55,6 @@
  "titles": "R Interface for Teaching",
 "urls": "posts/2013/07/rTeachingApp.html" 
 },
-"openscience": {
- "titles": "Reproducible Methods",
-"urls": "posts/2013/08/reproducible_methods.html" 
-},
-"reproducibility": {
- "titles": "Reproducible Methods",
-"urls": "posts/2013/08/reproducible_methods.html" 
-},
 "moving": {
  "titles": [ "Moved!", "Difference in posted date vs sessionInfo()" ],
 "urls": [ "posts/2013/09/Moved.html", "posts/2013/09/movingDates.html" ] 
@@ -58,10 +66,6 @@
 "Samatha": {
  "titles": [ "Test post", "Using Samatha", "Adding things to the site" ],
 "urls": [ "posts/2013/09/Test_post.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/adding_things.html" ] 
-},
-"tutorial": {
- "titles": "Using Samatha",
-"urls": "posts/2013/09/Using_samatha.html" 
 },
 "twitter": {
  "titles": "Adding things to the site",
@@ -80,10 +84,6 @@
 "urls": "posts/2013/09/postdocAlternatives.html" 
 },
 "academia": {
- "titles": "K-12 Wants Scientists!!",
-"urls": "posts/2013/09/postdocAlternatives.html" 
-},
-"science": {
  "titles": "K-12 Wants Scientists!!",
 "urls": "posts/2013/09/postdocAlternatives.html" 
 },
