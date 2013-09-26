@@ -1,6 +1,7 @@
 layout <- "default_nocomment_template.R"
 title <- "home"
 
-page <- content(
+page <- list(content=content(
   m("h2", "Blog Archive"),
-  html.postlist(site))
+  html.postlist(site)),
+             title="Archive")

@@ -1,5 +1,6 @@
 
 (function(page){
+  useTitle <- paste0(page$title, " -- Deciphering life: One bit at a time")
     links <- list(c("/index.html", "Home"),
                   c("/pages/about.html", "About"),
                   c("/pages/archive.html", "Blog Archive"),
@@ -17,7 +18,7 @@
                      c("http://software-carpentry.org/",
                        "Software carpentry"))
     webdoc("html5",
-           html_head(title = "Deciphering life: One bit at a time",
+           html_head(useTitle,
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
@@ -35,7 +36,7 @@
                m("div.container-fluid",
                  m("div.row-fluid",
                    m("div.span1"),
-                   m("div.span9", page),
+                   m("div.span9", page$content),
                    m("div.span2",
                      twitter,
                      m("h3", "Tags"),

@@ -5,8 +5,8 @@
                   c("/pages/archive.html", "Blog Archive"),
                   c("https://github.com/rmflight/researchBlog", "Blog Source"),
                   c("https://github.com/rmflight?tab=repositories", "Github Repos"))
-    twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
-    social <- include.textfile(file.path(site, "template", "resources", "html", "social_widget.html"))
+    twitterStream <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
+    twitterShare <- include.textfile(file.path(site, "template", "resources", "html", "twitterShare.html"))
     disqus <- include.textfile(file.path(site, "template", "resources", "html", "disqus.html"))
     blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"),
                      c("http://ivory.idyll.org/blog/", "Living in an Ivory Basement"),
@@ -19,7 +19,7 @@
                      c("http://software-carpentry.org/",
                      "Software carpentry"))
     webdoc("html5",
-           html_head("Deciphering life: One bit at a time",
+           html_head(page$title,
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
@@ -37,9 +37,9 @@
                m("div.container-fluid",
                  m("div.row-fluid",
                    m("div.span1"),
-                   m("div.span9", content(page, social, disqus)),
+                   m("div.span9", content(page$content, twitterShare, disqus)),
                    m("div.span2",
-                     twitter,
+                     twitterStream,
                      m("h3", "Tags"),
                      html.taglist(site),
                      m("h3", "Blog Roll"),
