@@ -1,6 +1,3 @@
-layout <- "default_nocomment_template.R"
-title <- "home"
-
 currState <- get.site.state(site)
 
 source_posts <- names(currState$source_posts)
@@ -15,10 +12,12 @@ postdates <- postdates[useorder]
 
 print(postmd[1])
 
-page <- list(content=content(include.markdown(postmd[1]),
-                m("h6",
-                  link.to(get.postpath(postmd[1]), paste0("Posted on ", postdates[1]))),
-                m("h2", "Recent Posts:"),
-               html.postlist(site, 5)),
-             title="Home")
+page <- make.samatha.page(content=content(include.markdown(postmd[1]),
+                                          m("h6",
+                                            link.to(get.postpath(postmd[1]), paste0("Posted on ", postdates[1]))),
+                                          m("h2", "Recent Posts:"),
+                                          html.postlist(site, 5)),
+                          title="Home",
+                          layout="default_nocomment_template.R"
+              )
  
