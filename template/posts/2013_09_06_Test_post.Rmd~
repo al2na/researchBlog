@@ -16,7 +16,7 @@ plot(cars)
 
 ```{r gCars}
 library(ggplot2)
-ggplot(cars, aes(x=speed, y=dist)) + geom_point()
+ggplot(cars, aes(x=speed, y=dist)) + geom_points()
 ```
 
 Adding some text to test something.
