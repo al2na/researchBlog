@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Open VS Closed</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Open VS Closed</h1>
+
+<h2>TL;DR</h2>
+
+<p>I think data scientists should choose to learn <strong>open</strong> languages such as <code>R</code> and <code>python</code> because they are <strong>open</strong> in the sense that anyone can obtain them, use them and modify them for free, and this has lead to large, robust groups of users, making it more likely that packages exist that you can use, and others can easily build on your own work.</p>
+
+<h2>Why the debate?</h2>
+
+<p>This was sparked by a comment on twitter suggesting that data scientists and analysts need to be <em>polyglots</em>, that they should know more than <strong>one</strong> programming language or analysis framework (the full conversation of tweets can be found <a href="https://twitter.com/rmflight/status/387910932250517504">here</a>)</p>
+
+<blockquote class="twitter-tweet"><p>Data Scientists need to be Polyglots - know 2 or more of <a href="https://twitter.com/search?q=%23python&amp;src=hash">#python</a> <a href="https://twitter.com/search?q=%23rstats&amp;src=hash">#rstats</a> <a href="https://twitter.com/search?q=%23sas&amp;src=hash">#sas</a> <a href="https://twitter.com/search?q=%23spss&amp;src=hash">#spss</a> <a href="https://twitter.com/search?q=%23matlab&amp;src=hash">#matlab</a> <a href="https://twitter.com/search?q=%23julia&amp;src=hash">#julia</a> <a href="https://twitter.com/search?q=%23octave&amp;src=hash">#octave</a> <a href="http://t.co/LtzIOzZ4XH">http://t.co/LtzIOzZ4XH</a></p>&mdash; Gregory Piatetsky (@kdnuggets) <a href="https://twitter.com/kdnuggets/statuses/387706109509005312">October 8, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>The commenter suggested knowing at least two of:</p>
+
+<ul>
+<li>R</li>
+<li>Python</li>
+<li>Matlab</li>
+<li>SPSS</li>
+<li>SAS</li>
+<li>Julia</li>
+<li>Octave</li>
+</ul>
+
+<p>My comment back was that one should really evaluate whether SPSS, SAS and Matlab should be on this list, as they are <em>closed</em> languages, not open source.</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/kdnuggets">@kdnuggets</a> <a href="https://twitter.com/data_nerd">@data_nerd</a> I would remove <a href="https://twitter.com/search?q=%23matlab&amp;src=hash">#matlab</a>, <a href="https://twitter.com/search?q=%23sas&amp;src=hash">#sas</a> and <a href="https://twitter.com/search?q=%23spss&amp;src=hash">#spss</a> off the list, just because they are proprietary languages</p>&mdash; Robert M Flight (@rmflight) <a href="https://twitter.com/rmflight/statuses/387906638713081856">October 9, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I want to expand on <em>why</em> I made that comment. Let me be forthright, I have not used <code>SPSS</code>, nor <code>SAS</code>, but I have programmed in <code>MatLab</code> and <code>R</code> extensively, and dabbled in <code>Python</code>.</p>
+
+<h2>Closed</h2>
+
+<p>What is a closed analysis language? I would say that there are three types of closed languages:</p>
+
+<ol>
+<li>those that are not free (but still may make code openly available)</li>
+<li>those where the underlying engine is closed source</li>
+<li>those where one cannot write their own functions to expand on what is already available</li>
+</ol>
+
+<p>Now, <code>MatLab</code> fits the first two categories. It is rather expensive to get a license for, the license <strong>can</strong> be restrictive (I know they have had a lot of abuse of licenses in the past, and they are trying to avoid that), and you are not expected to poke around in the internals of the <code>MatLab</code> engine. Oh, and if you want more than the base engine, expect to pay heavily for add-on packages.</p>
+
+<p>However, it is possible to write add-on&#39;s for <code>MatLab</code>. I have previously <a href="http://www.mathworks.com/matlabcentral/fileexchange/authors/19294">written a few</a>.</p>
+
+<h3>Closed problem: Checking results</h3>
+
+<p>So why are closed languages a problem? A closed language that does not make it <strong>possible</strong> to examine the underlying functionality of the analysis engine has two problems:</p>
+
+<ol>
+<li>surety that calculations are done correctly</li>
+<li>the ability of others to run and check results</li>
+</ol>
+
+<p>Both of these are issues that are really important in <strong>science</strong>. I would consider a <strong>data scientist</strong> to be doing actual <strong>science</strong>, so others should be able to scrutinize their work. The best scrutiny, is for others to be able to actually run their code. If I can&#39;t run your code, then how do I know what you did is right?? If I can&#39;t afford a copy of <code>MatLab</code> to run your code (assuming you made it available, you did provide the source for the analysis, right?), that is a bad thing.</p>
+
+<h3>Closed problem: Re-using code</h3>
+
+<p>Of course, the other problem is that with a closed language you have made it impossible for others to easily make use of your analysis. Sure, they could code it up in another language, but unless it is the be-all and end-all of analysis methods, I&#39;m not going to bother. I don&#39;t have a license for <code>MatLab</code>, or <code>SPSS</code>, or <code>SAS</code>, and I can&#39;t afford it; therefore I&#39;m not going to use your method / code nor give you a citation or credit.</p>
+
+<h2>Solution: Open languages</h2>
+
+<p>Languages like <code>R</code> and <code>python</code>, they don&#39;t have these problems. If I wonder how a function in the base distribution of <code>R</code> or <code>python</code> works, I can go look at the source. If I find a bug, I can suggest a fix, or fix it myself and tell others about it. In addition, if I write code to do an analysis, I can make it available and know that others <strong>should</strong> have the ability to examine it, including re-running it, in addition to using it for themselves, if it is licensed appropriately. This is the way science should work.</p>
+
+<h2>What should you use?</h2>
+
+<p>Some would argue that you should use <code>MatLab</code>, <code>SAS</code>, and <code>SPSS</code> because they have been around for a while, and are the standard. I would argue that you should not use them because they are controlled by single corporate entities, who are only interested in what will get people to buy their product and use it. You should use software that <a href="http://r4stats.com/articles/popularity/">others are using</a>, and that others will be able to use, regardless of income.</p>
+
+</body>
+
+</html>
+
