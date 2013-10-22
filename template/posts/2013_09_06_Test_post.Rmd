@@ -14,3 +14,9 @@ And here is a graph:
 plot(cars)
 ```
 
+```{r gCars}
+library(ggplot2)
+ggplot(cars, aes(x=speed, y=dist)) + geom_point()
+```
+
+Adding some text to test something.

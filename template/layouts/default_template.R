@@ -1,16 +1,32 @@
 
 (function(page){
     links <- list(c("/index.html", "Home"),
-                  c("/pages/about.html", "About"))
-    twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
+                  c("/pages/about.html", "About"),
+                  c("/pages/archive.html", "Blog Archive"),
+                  c("https://github.com/rmflight/researchBlog", "Blog Source"),
+                  c("https://github.com/rmflight?tab=repositories", "Github Repos"))
+    twitterStream <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
+    twitterShare <- include.textfile(file.path(site, "template", "resources", "html", "twitterShare.html"))
     disqus <- include.textfile(file.path(site, "template", "resources", "html", "disqus.html"))
-    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"))
+    blogroll <- list(c("http://www.r-bloggers.com/", "R bloggers"),
+                     c("http://ivory.idyll.org/blog/", "Living in an Ivory Basement"),
+                     c("http://bytesizebio.net/", "Byte Size Biology"),
+                     c("http://robjhyndman.com/hyndsight/", "Hyndsight"),
+                     c("http://solomonmessing.wordpress.com/blog/", "Solomon Messing"),
+                     c("http://nsaunders.wordpress.com/", "What You're Doing Is Rather Desperate"),
+                     c("http://yihui.name/en/", "Yihui Xie's Blog"),
+                     c("http://simplystatistics.org/", "Simply Statistics"),
+                     c("http://software-carpentry.org/",
+                     "Software carpentry"))
     webdoc("html5",
-           html_head(title = "Deciphering life: One bit at a time",
+           html_head(page$title,
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
-                     '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">'),
+                     '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">',
+                     include.textfile(file.path(site, "template", "resources", "html", "analytics.html")),
+                     include.textfile(file.path(site, "template", "resources", "html", "r_highlight.html")),
+                     include.textfile(file.path(site, "template", "resources", "html", "social_sharing.html"))),
            html_body(
                m("div.container-fluid well",
                  m("h1", "Deciphering life: One bit at a time"),
@@ -21,18 +37,16 @@
                m("div.container-fluid",
                  m("div.row-fluid",
                    m("div.span1"),
-                   m("div.span9", page),
+                   m("div.span9", content(page$content, twitterShare, disqus)),
                    m("div.span2",
-                     twitter,
+                     twitterStream,
                      m("h3", "Tags"),
                      html.taglist(site),
-                     m("h3", "Blogs"),
+                     m("h3", "Blog Roll"),
                      unordered.list(lapply(blogroll, function(x) link.to(x[1], x[2]))))),
                  m("div.span12",
                    m("div.span2"),
                      m("div.span8",
-                       m("h3", "Comments"),
-                       disqus,
                        m("footer.footer",
                        m("p.right back_to_top",
                          link.to("#", "&uArr; Page Top")),

@@ -1,0 +1,5 @@
+% openscience
+
+# PubmedCommons API
+
+The announcements are out, Pubmed is introducing a commenting system, theoretically providing a single location for true post-publication peer review. This is a really good idea, as NCBI is likely to be around for a lot longer than a given publisher, and the requirement for all NIH funded research to be deposited into Pubmed.
