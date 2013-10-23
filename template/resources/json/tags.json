@@ -87,6 +87,10 @@
  "titles": "Portable, personal packages",
 "urls": "posts/2013/09/github_packages.html" 
 },
+"openlanguage": {
+ "titles": "Open VS Closed",
+"urls": "posts/2013/10/openvsclosed.html" 
+},
 "precalculate": {
  "titles": "Pre-calculating large tables of values",
 "urls": "posts/2013/10/precalcLookup.html" 
