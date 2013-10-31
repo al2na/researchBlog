@@ -10,9 +10,14 @@ postmd <- str_replace(source_posts, "\\.Rmd", "\\.md")
 postmd <- postmd[useorder]
 postdates <- postdates[useorder]
 
-print(postmd[1])
+#print(postmd[1])
+
+page.tags <- extract.tags(postmd[1])
+tag.linklist <- tag.links(page.tags)
+tagstring <- paste0("Tagged in: ", paste0(tag.linklist, collapse=", "))
 
 page <- make.samatha.page(content=content(include.markdown(postmd[1]),
+                                          m("h5", tagstring),
                                           m("h6",
                                             link.to(get.postpath(postmd[1]), paste0("Posted on ", postdates[1]))),
                                           m("h2", "Recent Posts:"),

@@ -10,6 +10,7 @@ rss.category.feeds <- c("R")
 ###### tag setup ######
 
 tag.layout = "default_nocomment_template.R"
+includetags <- TRUE
 
 ###### blog posts ######
 
