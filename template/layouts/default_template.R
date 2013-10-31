@@ -18,12 +18,18 @@
                      c("http://simplystatistics.org/", "Simply Statistics"),
                      c("http://software-carpentry.org/",
                      "Software carpentry"))
+    
+    feeds <- unordered.list(list(
+      c(link.to("/rss.xml", "SiteWide Feed")),
+      c(link.to("/tags/R.xml", "R Feed"))), list.opts = list(class="feed-list"))
+    
     webdoc("html5",
            html_head(page$title,
                      '<meta charset="utf-8"><meta content="width=device-width, initiali-scale=1.0, user-scalable=yes" name="viewport">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">',
                      '<link href="/css/smartphone.css" media="only screen and (max-device-width:480px)" rel="stylesheet" type="text/css">',
+                     '<link href="/css/feedList.css" rel="stylesheet" type="text/css">',
                      include.textfile(file.path(site, "template", "resources", "html", "analytics.html")),
                      include.textfile(file.path(site, "template", "resources", "html", "r_highlight.html")),
                      include.textfile(file.path(site, "template", "resources", "html", "social_sharing.html"))),
@@ -40,10 +46,14 @@
                    m("div.span9", content(page$content, twitterShare, disqus)),
                    m("div.span2",
                      twitterStream,
-                     m("h3", "Tags"),
-                     html.taglist(site),
+                     m("h3", "Feeds"),
+                     feeds,
                      m("h3", "Blog Roll"),
-                     unordered.list(lapply(blogroll, function(x) link.to(x[1], x[2]))))),
+                     unordered.list(lapply(blogroll, function(x) link.to(x[1], x[2]))),
+                     m("h3", "Tags"),
+                     html.taglist(site)
+                     
+                     )),
                  m("div.span12",
                    m("div.span2"),
                      m("div.span8",
