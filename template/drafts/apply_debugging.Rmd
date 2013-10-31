@@ -1,0 +1,3 @@
+% R, debugging
+
+# Functions outside apply for debugging
