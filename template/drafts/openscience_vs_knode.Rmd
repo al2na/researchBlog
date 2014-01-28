@@ -1,0 +1,11 @@
+% github, openscience, twitter
+
+# Researcher Discoverability
+
+University of Kentucky recently launched a portal, KNODE, for helping others to discover potential collaborators at UK. This looks like a large corporate venture, that is probably costing a large amount of capital. I wonder if the Universities money would be better spent on a Github Enterprise package and teaching how to use social media like twitter. Here is why I think that.
+
+Github -> hosting of content using github pages, easy to create, modify and update; hosting research and teaching materials  Enterprise allows private hosting, with ability to easily make public when ready
+
+Open Science -> early / often sharing of research results; can be encouraged by the use of Github pages and repos
+
+Twitter use -> connect with other academics and **other** researchers, and point to github pages and repos.

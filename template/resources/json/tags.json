@@ -1,7 +1,15 @@
 {
  "R": {
- "titles": [ "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages" ],
-"urls": [ "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html" ] 
+ "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages" ],
+"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html" ] 
+},
+"bioconductor": {
+ "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "R, RStudio, and release and dev Bioconductor" ],
+"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2013/09/bioconductorDevLibs.html" ] 
+},
+"cdf": {
+ "titles": "Creating custom CDF for Affy chips in R / Bioconductor",
+"urls": "posts/2012/07/customAffyCDF.html" 
 },
 "openscience": {
  "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Open VS Closed Analysis Languages", "PubmedCommons API" ],
@@ -67,10 +75,6 @@
  "titles": "Adding things to the site",
 "urls": "posts/2013/09/adding_things.html" 
 },
-"bioconductor": {
- "titles": "R, RStudio, and release and dev Bioconductor",
-"urls": "posts/2013/09/bioconductorDevLibs.html" 
-},
 "rstudio": {
  "titles": "R, RStudio, and release and dev Bioconductor",
 "urls": "posts/2013/09/bioconductorDevLibs.html" 
@@ -102,5 +106,13 @@
 "pubmedcommons": {
  "titles": "PubmedCommons API",
 "urls": "posts/2013/10/pubmedComonsAPI.html" 
+},
+"learning": {
+ "titles": "Motivated Learning",
+"urls": "posts/2014/01/motivational_learning_stories.html" 
+},
+"softwarecarpentry": {
+ "titles": "Motivated Learning",
+"urls": "posts/2014/01/motivational_learning_stories.html" 
 } 
 }
