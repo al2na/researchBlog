@@ -2,7 +2,7 @@
 
 # Making code available to reproduce figures
 
-Recently a group made a really slick point and click interface for producing boxplots using R and Shiny. Some have made fun of it because it made it into Nature Methods, but considering how important boxplots are to interpreting and communicating biological results, I think it is good that the authors have provided an interface that allows others without R knowledge to produce nice looking plots. 
+Recently a group made a really [slick point and click interface](http://boxplot.tyerslab.com/) for producing boxplots using R and Shiny. Some have made fun of it because it made it into Nature Methods, but considering how important boxplots are to interpreting and communicating biological results, I think it is good that the authors have provided an interface that allows others without R knowledge to produce nice looking plots. 
 
 ## But ...
 
