@@ -18,14 +18,14 @@ First off, you probably want to put your functions into [packages](http://cran.r
 
 If you are using `RStudio`, I recommend setting your package options:
 
-* Generate package documentation with `roxygen`
+* Generate package documentation with `roxygen` (roxygen2)
   * Select all the options (especially regenerate `Rd` files on `Build & Reload`)
   
 Whenever you make changes to your package functions, you simply `commit` (you are using version control, right??), and then `Build & Reload` (if using `RStudio`) or `install()` if using `devtools`.
 
-## Roxygen Documentation
+## Roxygen2 Documentation
 
-For documentation that lives with your functions, I heavily recommend [`roxygen`](http://adv-r.had.co.nz/Documenting-functions.html). Although the normal way to document stuff in `R` is through the use of `Rd` files, `roxygen` allows you to put the following in your `R\functions.r` file:
+For documentation that lives with your functions, I heavily recommend using [`roxygen2`](http://adv-r.had.co.nz/Documenting-functions.html). Although the normal way to document stuff in `R` is through the use of `Rd` files, `roxygen2` allows you to put the following in your `R\functions.r` file:
 
 ```r
 #' this is a silly function
@@ -41,3 +41,5 @@ sillyFunction <- function(input1, input2){
 When you do `Build & Reload` (or `install`), the required `Rd` file will be generated automatically, and upon `Reload`ing the package, you will have full access to your documentation, and tab completion of your new function, along with descriptions of the parameters if you are using `RStudio`. Note, if you are not using `RStudio`, then you should do `document` to re-generate `Rd` files prior to doing `install`.
 
 This particular workflow is how I now work in `R`, for almost every project that includes **any** self written functions, including analysis projects. Why I use this (and not another format such as [ProjectTemplate](http://www.johnmyleswhite.com/notebook/2010/08/26/projecttemplate/)) is another post, hopefully soon.
+
+Updated 2014.02.21: Note that the original post mentioned `roxygen` instead of `roxygen2`. Thanks Carl for pointing that out. You should use `roxygen2` for documentation.
