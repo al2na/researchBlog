@@ -1,0 +1,24 @@
+% optimization, genetic algorithm, simulated annealing
+
+# Optimization by Simulated Annealing Genetic Algorithm (SAGA)
+
+There have been many attempts to combine optimization algorithms using a combined simulated annealing genetic algorithm (SAGA). In practice, this approach appears to improve the convergence of the solution and avoid getting trapped in local minima. The literature that is available appears to have two implementations, described below. In both cases however, new solutions are accepted if they result in lower cost functions (energy), or a probability of acceptance is defined based on the temperature using a Boltzmann type function incorporating the change of energy and the temperature.
+
+## Interleaved GA / SA
+
+Given a population of individuals (chromosomes), apply genetic operators (crossover, mutation) to selected individuals to create a new population. This is followed by applying simulated annealing to selected individual(s). Lower temperature and repeat. This methodology and variants thereof has been used as a general strategy for inverse problems ([Renyuan et al., 1996, paywall](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=00497490)), designing damping control in electrical transmission systems ([Xie, 2012](http://cdn.intechopen.com/pdfs-wm/38522.pdf)), job shop scheduling ([Tamilarasi and Anantha Kumar, 2010](http://www.ijest-ng.com/ijest-ng-vol2-no1-pp144-151.pdf)), and small molecule docking in Autodock 4 ([Morris et al., 1998, paywall](http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1096-987X(19981115)19:14%3C1639::AID-JCC10%3E3.0.CO;2-B/pdf))
+
+## GA With Acceptance Controlled by Temperature
+
+In contrast with the above, in these methods, individuals are generated solely by genetic operators (crossover and mutation), and are accepted into the population using a Boltzmann type calculation. At each generation the temperature is decreased, thereby decreasing the probability of accepting higher energy individuals. This has previously been used design transit routes ([Liu et al., 2010, paywall](http://link.springer.com/chapter/10.1007%2F978-3-642-16472-9_37)), and in take-or-pay contracts ([Wong and Yin Wa Wong, 1996, paywall](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=485994&tag=1)).
+
+## Temperature Controlling Mutation Rate
+
+In neither of the strategies above is the mutation or crossover rate modified as a function of the decreasing temperature. An alternative implementation would be to combine a GA where the probability of accepting new solutions is controlled by the temperature, *and* the mutation rate (the number of elements in an individual undergoing mutation) varies as a function of the temperature, namely as the temperature decreases the number of elements that are mutated decreases as well. This corresponds to varying the search space available by mutation as a function of temperature. This idea of controlling the search space by temperature has been previously implemented by using a *simplex* to generate new solutions in simulated annealing, and controlling the space of new points by the temperature (described in the 1996 edition of Numerical Recipes in C in section 10.9).
+
+HNB Moseley has previously used (and published) such a SAGA method wherein the mutation rate changes as a function of the temperature to determine simultaneous solutions in metabolic modeling ([Genetic Algorithm for Isotopologues in Metabolic Systems (GAIMS)](http://www.ncbi.nlm.nih.gov/pubmed/21627825)). 
+
+
+## Examining Advantages
+
+However, to our knowledge, the *advantages* or *disadvantages* of changing the mutation rate as a function of temperature has never been examined, especially in comparison to the other two types of implementations discussed above. If you know of any other published instances of SAGA methods where the mutation rate is varied, we would like to know before we attempt to do the characterisation ourselves.

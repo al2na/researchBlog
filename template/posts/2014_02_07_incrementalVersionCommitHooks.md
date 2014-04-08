@@ -95,8 +95,12 @@ This same behavior is used to keep from making an infinite number of increments 
 
 ## Installation
 
-To install the hooks, create the `pre-commit` or `post-commit` file in your `.git/hooks` directory, paste in the commands from the appropriate one in the [gist](https://gist.github.com/rmflight/8863882), save the file, and make it executable (`chmod` on 'nix systems). I have been able to use both of these on 'nix and Windows systems.
+To install the hooks, create the `pre-commit` or `post-commit` file in your `.git/hooks` directory, paste in the commands from the appropriate one in the [gist](https://gist.github.com/rmflight/8863882), save the file, and make it executable (`chmod` on 'nix systems). I have been able to use both of these on 'nix and Windows systems. Also don't forget to provide the path to your `Rscript` executable (either in the same directory as your `R` binary, or at /usr/bin/Rscript).
 
 Just in testing these scripts I have become surprised at the potential utility, and I hope you find them useful as well if you are developing `R` packages (which you should be if you are writing any analysis).
 
 If you have comments, suggestions, or improvements feel free to modify the gist, or leave a comment, contact me on [twitter](https://twitter.com/rmflight), or send me an email (check the About link above).
+
+## Caveats
+
+The script *assumes* the version separator is ".", and that you always are incrementing the last value. If you don't like it, feel free to change it.
