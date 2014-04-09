@@ -6,7 +6,12 @@ I can finally say that our publication on our `Bioconductor` package `categoryCo
 
 ## TL;DR
 
-The software package has been in development in one form or another since 2010, released to `Bioconductor` in summer 2012, and the publication has bounced around and been revised since spring of 2013, and it is finally available to you. All of the supplementary data and methods are available as an `R` package on [github](https://github.com/rmflight/ccPaper).
+The software package has been in development in one form or another since 2010, released to `Bioconductor` in summer 2012, and the publication has bounced around and been revised since spring of 2013, and it is finally available to you. All of the supplementary data and methods are available as an `R` package on [github](https://github.com/rmflight/ccPaper). Version control using `git` was instrumental in getting this work out in a timely manner.
+
+If I did it again, I would:
+* Write the manuscript using `R` markdown, as a vignette in a package
+* Ask to be able to make reviewer points issues on Github
+* Submit a preprint with submission
 
 ## Inspiration
 
@@ -19,6 +24,14 @@ Combing through the literature produced a number of genes differentially express
 ## V 0.0000001
 
 I started developing this idea into a simple package (i.e. collection of `R` scripts), that was able to do at least GO term enrichment, and that could be hosted on our group webserver to enable others to make use of it. Visualization and interrogation used the `imageMaps` function in Robert Gentleman's original demonstration, however any number of data sets could now be compared.
+
+## categoryCompare Method -- Summary
+
+The basic method is to take gene (or really any annotated feature) lists from multiple experiments, and perform annotation (Gene Ontology Terms, KEGG Pathways, etc) enrichment (either hypergeometric or GSEA type) on each gene list, determine significant annotations from each list, and then examine which annotations come from which list. 
+
+Because this results in a lot of data to parse through, exploration of the results is facilitated by considering the annotations as a network of annotations related by the number of shared genes between them. 
+
+If you want to know more, check out the [paper](http://journal.frontiersin.org/Journal/10.3389/fgene.2014.00098/abstract), or the [vignette](http://bioconductor.org/packages/release/bioc/vignettes/categoryCompare/inst/doc/categoryCompare_vignette.pdf) in the `Bioconductor` package
 
 ## Others
 
@@ -49,4 +62,42 @@ Our first attempt at publication focussed on the original data that inspired the
 
 ## Second Publication Attempt
 
-The second attempt was submitting to the current home in the **Bioinformatics and Computational Biology** section of **Frontiers in Genetics**. This time, although the reviews were harsh, they were fair, and actually contained **useful** critique, and pointed to a way forward. 
+The second attempt was submitting to the current home in the **Bioinformatics and Computational Biology** section of **Frontiers in Genetics**. This time, although the reviews were harsh (i.e. they were not immediately favorable), they were fair, and actually contained **useful** critique, and pointed to a way forward.
+
+Unfortunately for me, revising the manuscript to address the reviewers criticisms meant a lot of work to construct theoretical examples, as well as a lot of thought in order to pare the manuscript down to make sure our primary message was clearly communicated. 
+
+### Frontiers Interactive Review
+
+I would like to note that Frontiers interactive review system, with the ability to discuss individual points with the reviewers (still anonymously) really helped make it possible to determine which points were make or break, and discuss different ways to approach things. This was the best review experience I have ever had, and a large part of that I think was due to being able to interact with the reviewers directly, and not just through letters mediated by the editor.
+
+## Github package of supplementary materials
+
+In the initial publication, I had included the set of scripts used for analysis, data files, etc. However, the amount of work required in the rewrite was so substantial, that I created an `R` package specifically for the analyses that went into the paper, with separate `R` markdown documents for each result type (hypothetical, two different experimental comparisons). This package has documents on how raw data was processed, as well as the semi-processed experimental data.
+
+### Publication specific branch
+
+Due to specific changes to the `categoryCompare` software needed to address the reviewer comments, a publication specific branch of the development version was created (paper). This allowed me to quickly introduce code and features that the reviewers had asked for, without worrying about breaking the current development version that will be released in Bioconductor shortly. 
+
+## To Do
+
+As with most software projects, there is still plenty to be done. 
+
+* Incorporate new functionality from `paper` branch into `dev`
+  * Specifically ability to do GSEA built in, and new visualization options
+* Change from `latex` vignette to `R` markdown (this is technically done, but hasn't made it into the dev branch)
+* Switch to `roxygen2` documentation (could be fun due to use of S4)
+* Implement proper testing using `testthat`
+* Refactor a lot of code to improve speed, use `R` conventions
+  * I was still a relatively `R` newbie when I wrote the package, and as I looked at the code while making changes for the reviewers, I noticed some places where I had done some silly things, mainly because I didn't know better.
+* Consider splitting visualization into its own package
+  * Although I developed the visualization specifically for `categoryCompare`, I think it is generic enough that others might benefit from having it available separately. Therefore I need to think about separating it out, and how best to go about it without making it hard for `categoryCompare` to keep working as it already does.
+  
+## Side Effects
+
+A nice side effect of the package is that any annotation enrichment I do now, I almost always do it in the framework of `categoryCompare`, just because it is a lot easier to make sense of using the visualization capabilities and coupling with `Cytoscape`.
+
+## What Would I Do Differently?
+
+Keeping in mind that I started this work almost 4 years ago, when I still didn't know any `R`, and had yet to be exposed to the reproducibility and open science movements, here are some things that if I started today I would do differently (you can probably guess some of these from above):
+
+* 
