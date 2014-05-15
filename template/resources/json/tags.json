@@ -1,11 +1,11 @@
 {
  "R": {
- "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages", "Package Version Increment Pre- and Post-commit Hooks", "Installing MatLab vs Installing R", "Self-written function help" ],
-"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html", "posts/2014/02/incrementalVersionCommitHooks.html", "posts/2014/02/installingRMatlab.html", "posts/2014/02/package_dev_documentation.html" ] 
+ "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages", "Package Version Increment Pre- and Post-commit Hooks", "Installing MatLab vs Installing R", "Self-written function help", "categoryCompare Paper Finally Out!" ],
+"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html", "posts/2014/02/incrementalVersionCommitHooks.html", "posts/2014/02/installingRMatlab.html", "posts/2014/02/package_dev_documentation.html", "posts/2014/04/categoryComparePaper.html" ] 
 },
 "bioconductor": {
- "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "R, RStudio, and release and dev Bioconductor" ],
-"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2013/09/bioconductorDevLibs.html" ] 
+ "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "R, RStudio, and release and dev Bioconductor", "categoryCompare Paper Finally Out!" ],
+"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2014/04/categoryComparePaper.html" ] 
 },
 "cdf": {
  "titles": "Creating custom CDF for Affy chips in R / Bioconductor",
@@ -130,5 +130,33 @@
 "help": {
  "titles": "Self-written function help",
 "urls": "posts/2014/02/package_dev_documentation.html" 
+},
+"optimization": {
+ "titles": "Optimization by Simulated Annealing Genetic Algorithm (SAGA)",
+"urls": "posts/2014/03/saga_blogPost.html" 
+},
+"genetic": {
+ "titles": "Optimization by Simulated Annealing Genetic Algorithm (SAGA)",
+"urls": "posts/2014/03/saga_blogPost.html" 
+},
+"algorithm": {
+ "titles": "Optimization by Simulated Annealing Genetic Algorithm (SAGA)",
+"urls": "posts/2014/03/saga_blogPost.html" 
+},
+"simulated": {
+ "titles": "Optimization by Simulated Annealing Genetic Algorithm (SAGA)",
+"urls": "posts/2014/03/saga_blogPost.html" 
+},
+"annealing": {
+ "titles": "Optimization by Simulated Annealing Genetic Algorithm (SAGA)",
+"urls": "posts/2014/03/saga_blogPost.html" 
+},
+"meta-analysis": {
+ "titles": "categoryCompare Paper Finally Out!",
+"urls": "posts/2014/04/categoryComparePaper.html" 
+},
+"publication": {
+ "titles": "categoryCompare Paper Finally Out!",
+"urls": "posts/2014/04/categoryComparePaper.html" 
 } 
 }
