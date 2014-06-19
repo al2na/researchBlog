@@ -6,7 +6,7 @@ University of Kentucky (UK) recently partnered with the discovery portal [KNODE]
 
 ## Preprints
 
-Submitting manuscripts to a preprint server such as arxiv or biorxiv gives a researchers work possible visibility, and can result in immediate feedback to improve a work prior to submission, or as part of the peer review.
+Submitting manuscripts to a preprint server such as [arxiv](http://arxiv.org/), [biorxiv](http://biorxiv.org/) or [peerj](https://peerj.com/preprints/) gives a researchers work possible visibility, and can result in immediate feedback to improve a work prior to submission, or as part of the peer review.
 
 ## Github
 

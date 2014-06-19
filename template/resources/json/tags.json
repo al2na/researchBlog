@@ -12,8 +12,8 @@
 "urls": "posts/2012/07/customAffyCDF.html" 
 },
 "openscience": {
- "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Open VS Closed Analysis Languages", "PubmedCommons API", "Installing MatLab vs Installing R" ],
-"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html", "posts/2013/10/openvsclosed.html", "posts/2013/10/pubmedComonsAPI.html", "posts/2014/02/installingRMatlab.html" ] 
+ "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Open VS Closed Analysis Languages", "PubmedCommons API", "Installing MatLab vs Installing R", "Researcher Discoverability" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html", "posts/2013/10/openvsclosed.html", "posts/2013/10/pubmedComonsAPI.html", "posts/2014/02/installingRMatlab.html", "posts/2014/06/openscience_vs_knode.html" ] 
 },
 "reproducibility": {
  "titles": [ "Writing papers using R Markdown", "Reproducible Methods" ],
@@ -72,8 +72,8 @@
 "urls": [ "posts/2013/09/Using_samatha.html", "posts/2013/09/adding_things.html" ] 
 },
 "twitter": {
- "titles": "Adding things to the site",
-"urls": "posts/2013/09/adding_things.html" 
+ "titles": [ "Adding things to the site", "Researcher Discoverability" ],
+"urls": [ "posts/2013/09/adding_things.html", "posts/2014/06/openscience_vs_knode.html" ] 
 },
 "rstudio": {
  "titles": "R, RStudio, and release and dev Bioconductor",
@@ -162,5 +162,9 @@
 "bioinformatics": {
  "titles": "Bioinformatics Presentations that Lack Results (or Biological Relevance)",
 "urls": "posts/2014/06/lack_of_results.html" 
+},
+"github": {
+ "titles": "Researcher Discoverability",
+"urls": "posts/2014/06/openscience_vs_knode.html" 
 } 
 }
