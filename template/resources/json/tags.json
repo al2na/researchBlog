@@ -1,7 +1,7 @@
 {
  "R": {
- "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages", "Package Version Increment Pre- and Post-commit Hooks", "Installing MatLab vs Installing R", "Self-written function help", "categoryCompare Paper Finally Out!" ],
-"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html", "posts/2014/02/incrementalVersionCommitHooks.html", "posts/2014/02/installingRMatlab.html", "posts/2014/02/package_dev_documentation.html", "posts/2014/04/categoryComparePaper.html" ] 
+ "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "Writing papers using R Markdown", "Hive Plots using R and Cytoscape", "Storing package data in custom environments", "Tim Hortons Density", "R Interface for Teaching", "Using Samatha", "R, RStudio, and release and dev Bioconductor", "Portable, personal packages", "Pre-calculating large tables of values", "Open VS Closed Analysis Languages", "Package Version Increment Pre- and Post-commit Hooks", "Installing MatLab vs Installing R", "Self-written function help", "categoryCompare Paper Finally Out!", "R Job Notifications Using Twitter" ],
+"urls": [ "posts/2012/07/customAffyCDF.html", "posts/2012/10/papersinRmd.html", "posts/2012/11/hiveplots_example.html", "posts/2013/05/customEnvironments.html", "posts/2013/06/timmysDensity.html", "posts/2013/07/rTeachingApp.html", "posts/2013/09/Using_samatha.html", "posts/2013/09/bioconductorDevLibs.html", "posts/2013/09/github_packages.html", "posts/2013/10/precalcLookup.html", "posts/2013/10/openvsclosed.html", "posts/2014/02/incrementalVersionCommitHooks.html", "posts/2014/02/installingRMatlab.html", "posts/2014/02/package_dev_documentation.html", "posts/2014/04/categoryComparePaper.html", "posts/2014/06/r_job_notifications_twitter.html" ] 
 },
 "bioconductor": {
  "titles": [ "Creating custom CDF for Affy chips in R / Bioconductor", "R, RStudio, and release and dev Bioconductor", "categoryCompare Paper Finally Out!" ],
@@ -72,8 +72,8 @@
 "urls": [ "posts/2013/09/Using_samatha.html", "posts/2013/09/adding_things.html" ] 
 },
 "twitter": {
- "titles": [ "Adding things to the site", "Researcher Discoverability" ],
-"urls": [ "posts/2013/09/adding_things.html", "posts/2014/06/openscience_vs_knode.html" ] 
+ "titles": [ "Adding things to the site", "Researcher Discoverability", "R Job Notifications Using Twitter" ],
+"urls": [ "posts/2013/09/adding_things.html", "posts/2014/06/openscience_vs_knode.html", "posts/2014/06/r_job_notifications_twitter.html" ] 
 },
 "rstudio": {
  "titles": "R, RStudio, and release and dev Bioconductor",
