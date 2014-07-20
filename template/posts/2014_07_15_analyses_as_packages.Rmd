@@ -1,0 +1,46 @@
+% R, development, packages
+
+# Analyses as Packages
+
+## TL;DR
+
+Instead of writing an analysis as a single or set of `R` scripts, use a `package` and include the analysis as a `vignette` of the package. Read below for the why and the how.
+
+## Analyses and Reports
+
+As data science or statistical researchers, we tend to do a lot of analyses, whether for our own research or as part of a collaboration, or even for supervisors depending on where we work. As I have continued working in `R`, I have progressed from having a simple `.R` script (or collection of related scripts) to using a package to structure as much of my research as possible, including analyses that generate reports. 
+
+Note that I have been meaning to write this post for a while, but the tipping point was seeing these tweets from [@Hilary Parker](https://twitter.com/hspter) and [@David Nusinow](https://twitter.com/dnusinow)
+
+<blockquote class="twitter-tweet" lang="en"><p>I am all about the many short scripts rather than one long script when doing an analysis. I think I am alone here. <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a></p>&mdash; Hilary Parker (@hspter) <a href="https://twitter.com/hspter/statuses/489075887460339712">July 15, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## Why Packages
+
+Packages are `R`'s method for sharing code in a sensible way. Why not use them? They also give you access to `R`'s facilities for documentation and sharing computable documents. [@Hadley Wickham](https://twitter.com/hadleywickham) has a nice section on packages in his [Advanced R](http://adv-r.had.co.nz/Philosophy.html) book. 
+
+I use a lot of Hadley's packages in the following sections, because they are useful, and promote practices that make it extremely practical to use packages as a way to make an analysis a self-contained unit.
+
+### Structure
+
+Packages impose a relatively simple structure on your project directory. `/R` contains the `.R` files with your actual functions, and `/data` can contain any `.RData` or `.rda` files that you might need. Other data types (`.txt`, `.tab`, `.csv`) can also go in `/data`, or they may go in `/inst/extdata`. Note that in `/inst/extdata` you can specify any directory structure that seems appropriate.
+
+Other required files are [`DESCRIPTION`](http://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) and [`NAMESPACE`](http://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-namespaces).
+
+You may also have `.Rmd` or `.Rnw` / `.Rtex` files in `/vignettes` that generate `html` or `pdf` output that combines prose and `R` code into a single document. This is where things get really interesting in being able to package up an analysis, especially when combined with functions.
+
+### Functions
+
+Almost any analysis I have done involves writing at least one function, generally more, because I almost never do anything once in an analysis. Packages are **the** primary method of sharing functions in `R` that make sure that your functions play nice with the `R` NAMESPACE, and allow one to define function dependencies from other packages. If you define a function in a package (and `export` it), it immediately becomes re-usable in multiple analyses, without worrying about suffering from copypasta.
+
+### Function Documentation
+
+The easiest way to document functions is by using [`roxygen2`](http://cran.r-project.org/web/packages/roxygen2/index.html) (see the intro [vignette](http://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html)). This allows you to worry about the documentation right next to the function itself, and not worry about writing separate documentation files in `/inst/doc` (really, you don't want to do it, I have, and it is painful). The [keywords](http://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html) in `roxygen2` make sense, and are not hard to remember. 
+
+### Data
+
+In addition, packages allow you to also keep your data with your analysis. If you want to 
+
+## Why Vignettes as a Reporting Method
+
+One great feature of packages is that one can include 
