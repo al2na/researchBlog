@@ -39,7 +39,11 @@ The easiest way to document functions is by using [`roxygen2`](http://cran.r-pro
 
 ### Data
 
-In addition, packages allow you to also keep your data with your analysis. If you want to 
+As mentioned above, you can include data with your package. The neat thing about including data, is you can document it and have that documentation available as part of the package.
+
+I find it really useful to put any raw data that you want to work with in `/inst/extdata` in whatever format it exists, and then process the data and save it as an `.RData` file in `/data`, with associated documentation. It is also really useful if part of the calculations are long running, then you can save the results as an associated data file, and simply load it when needed in the analysis.
+
+Small note about documenting data sets. You put the `roxygen2` comments in another file, and also need to provide `@name` explicitly, and follow the documentation block with `NULL`. Check the `roxygen2` vignette "Generating Rd files" for a specific example.
 
 ## Why Vignettes as a Reporting Method
 
