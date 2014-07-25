@@ -21,6 +21,8 @@ Packages are `R`'s method for sharing code in a sensible way, making it possible
 
 I use a lot of Hadley's packages in the following sections, because they are useful, and promote practices that make it extremely practical to use packages as a way to make an analysis a self-contained unit.
 
+Duncan Murdoch has a nice slide deck on why to use packages and vignettes [here](http://www.stats.uwo.ca/faculty/murdoch/ism2013/5Vignettes.pdf)
+
 ### Structure
 
 I want to breifly review the structure of package directories, you can read more about packages in Hadley's book (link above), and in the official `R` [documentation from `CRAN`](http://cran.r-project.org/doc/manuals/r-release/R-exts.html).
