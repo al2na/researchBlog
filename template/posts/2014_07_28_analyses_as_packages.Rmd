@@ -1,4 +1,4 @@
-% R, development, packages
+% R, development, packages, vignettes
 
 # Analyses as Packages
 
