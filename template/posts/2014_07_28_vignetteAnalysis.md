@@ -12,7 +12,8 @@ I will link to individual commits so that you can see how things change as we go
 
 To start, we will initialize the package. `devtools` or `rstudio` make this rather easy:
 
-```{r setupPackage, eval=FALSE}
+
+```r
 library(devtools)
 create("~/Documents/projects/personal/ismbTweetAnalysis")
 ```
