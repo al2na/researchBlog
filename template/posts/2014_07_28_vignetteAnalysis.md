@@ -107,3 +107,7 @@ Now your package can be installed by others using `devtools::install_github()`. 
 Now this was a simple example. Ideally I should have included tests for my functions, you can read up [1](https://github.com/hadley/testthat) [2](http://adv-r.had.co.nz/Testing.html) on how to do that. In addition, none of my functions use methods ([see why they are useful](http://adv-r.had.co.nz/OO-essentials.html)).
 
 I hope that you find this example useful, and will consider using `packages` more often even for **simple** analyses.
+
+* Reproducibility: One issue that may come up is how to make sure that you or someone else can directly reproduce the work in your package. Again, Hadley Wickham and the `rstudio` team have been thinking about this, and there is now the [`packrat` package](http://rstudio.github.io/packrat/) to make a project completely self-contained with all of it's dependencies.
+
+*Edit* - added note on reproducibility at the end. 
