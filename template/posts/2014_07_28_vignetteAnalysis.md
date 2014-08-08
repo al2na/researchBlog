@@ -110,4 +110,4 @@ I hope that you find this example useful, and will consider using `packages` mor
 
 * Reproducibility: One issue that may come up is how to make sure that you or someone else can directly reproduce the work in your package. Again, Hadley Wickham and the `rstudio` team have been thinking about this, and there is now the [`packrat` package](http://rstudio.github.io/packrat/) to make a project completely self-contained with all of it's dependencies.
 
-*Edit* - added note on reproducibility at the end. 
+*Edit 2014-07-28* - added note on reproducibility at the end. 

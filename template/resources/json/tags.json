@@ -80,8 +80,8 @@
 "urls": "posts/2013/09/bioconductorDevLibs.html" 
 },
 "postdoc": {
- "titles": "K-12 Wants Scientists!!",
-"urls": "posts/2013/09/postdocAlternatives.html" 
+ "titles": [ "K-12 Wants Scientists!!", "My Career Goals" ],
+"urls": [ "posts/2013/09/postdocAlternatives.html", "posts/2014/08/postdoc2staff.html" ] 
 },
 "academia": {
  "titles": "K-12 Wants Scientists!!",
@@ -174,5 +174,9 @@
 "vignettes": {
  "titles": [ "Analyses as Packages", "Creating an analysis as a package and vignette" ],
 "urls": [ "posts/2014/07/analyses_as_packages.html", "posts/2014/07/vignetteAnalysis.html" ] 
+},
+"career": {
+ "titles": "My Career Goals",
+"urls": "posts/2014/08/postdoc2staff.html" 
 } 
 }
