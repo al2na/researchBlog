@@ -25,7 +25,7 @@ After installing, navigate to your `git` repo for the project you want to enable
 ```
 travis login
 
-travis secure GH_TOKEN="yourgithubtoken"
+travis encrypt GH_TOKEN="yourgithubtoken"
 ```
 
 This will generate output that should be copied to your `.travis.yml` file. Essentially we have created an environment variable `GH_TOKEN` with your actual GitHub token, that is encrypted on the *travis-ci* servers. So this way you don't expose your actual GitHub token to anyone who looks at your `.travis.yml` file.
@@ -86,3 +86,7 @@ In addition, we need to add three lines to the `.travis.yml` file.
 
 
 And it seems to work quite nicely. As an example, my [`categoryCompare`](https://github.com/rmflight/categoryCompare) package now has it's vignette on the [`gh-pages` branch](http://rmflight.github.io/categoryCompare/), and this will get updated every time I push a commit. 
+
+## Update
+
+As [Carson](https://twitter.com/cpsievert) pointed out below, there was an error in the second code block. `travis secure` should be `travis encrypt`, as you are **encrypting** the credentials. **secure** is for decrypting something that was already encrypted. Thanks for catching it!
