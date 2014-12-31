@@ -178,5 +178,13 @@
 "career": {
  "titles": "My Career Goals",
 "urls": "posts/2014/08/postdoc2staff.html" 
+},
+"phdisabled": {
+ "titles": "Being a PhD Student and PostDoc with Migraines",
+"urls": "posts/2014/12/migraine_phdisabled.html" 
+},
+"migraines": {
+ "titles": "Being a PhD Student and PostDoc with Migraines",
+"urls": "posts/2014/12/migraine_phdisabled.html" 
 } 
 }
