@@ -7,6 +7,7 @@
                   c("/pages/archive.html", "Blog Archive"),
                   c("https://github.com/rmflight/researchBlog", "Blog Source"),
                   c("https://github.com/rmflight?tab=repositories", "Github Repos"),
+                  c("http://www.ncbi.nlm.nih.gov/myncbi/robert%20m.flight.1/comments/", "PubmedCommons Comments"),
                   c("/pages/cv.html", "CV"))
   
     twitter <- include.textfile(file.path(site, "template", "resources", "html", "twitter.html"))
