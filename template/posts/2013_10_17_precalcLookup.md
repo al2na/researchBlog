@@ -30,7 +30,7 @@ randomData[randomData > 25] <- 25
 hist(randomData, 100)
 ```
 
-![plot of chunk genRandomData](/mlab/data/rmflight/Documents/researchBlog//researchBlog/img/genRandomData.png) 
+![plot of chunk genRandomData](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/genRandomData.png) 
 
 
 ### The R way
@@ -142,13 +142,13 @@ precTable <- data.frame(org = actPVals, table = tableRes, percError = tableRawPr
 ggplot(precTable, aes(x = org, y = table)) + geom_point()
 ```
 
-![plot of chunk tablePres](/mlab/data/rmflight/Documents/researchBlog//researchBlog/img/tablePres1.png) 
+![plot of chunk tablePres](/home/rmflight/Projects/personal/researchBlog//researchBlog/img/tablePres1.png) 
 
 ```r
 ggplot(precTable, aes(x = org, y = percError)) + geom_point()
 ```
 
-![plot of chunk tablePres](/mlab/data/rmflight/Documents/researchBlog//researchBlog/img/tablePres2.png) 
+![plot of chunk tablePres](/home/rmflight/Projects/personal/researchBlog//researchBlog/img/tablePres2.png) 
 
 
 So, according to this, we are only introducing error at 0.782%, which isn't much. And the values look like the are well correlated, so we should be good. 

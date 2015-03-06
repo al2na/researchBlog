@@ -200,7 +200,7 @@ figCounts <- incCount(figCount, "f.randomFigure")
 
 And now we decide to actually insert it using `print(plotKeep)` with the option of `echo=FALSE`:
 
-![plot of chunk figureInsert](/mlab/data/rmflight/Documents/researchBlog//researchBlog/img/figureInsert.png) 
+![plot of chunk figureInsert](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/figureInsert.png) 
 
 
 **[Figure 1](#f.randomFigure). A random figure.**

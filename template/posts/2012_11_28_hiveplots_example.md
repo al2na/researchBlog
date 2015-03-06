@@ -258,7 +258,7 @@ saveImage(ccHive, file.path(imgPath, "hive_nonScaled.png"), "PNG")
 ```
 
 
-![nonScaled](/mlab/data/rmflight/Documents/researchBlog/researchBlog/img/hive_nonScaled.png)
+![nonScaled](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/hive_nonScaled.png)
 
 This view doesn't help us a whole lot, unfortunately. What if we normalize the radii for each axis to use a maximum value
 of 100?
@@ -292,7 +292,7 @@ saveImage(ccHive, file.path(imgPath, "hive_scaledAxes.png"), "PNG")
 ```
 
 
-![scaledAxes](/mlab/data/rmflight/Documents/researchBlog/researchBlog/img/hive_scaledAxes.png)
+![scaledAxes](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/hive_scaledAxes.png)
 
 This looks pretty awesome! And I can zoom in on it, and examine it, and look at various properties! And I get the full 
 scripting power of `R` if I want to do anything else with, such as select sets of edges or nodes and then query who is 

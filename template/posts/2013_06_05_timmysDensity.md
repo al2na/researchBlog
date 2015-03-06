@@ -176,7 +176,7 @@ p2 <- p + geom_point(data = timsLocs[, c("lat", "long")], aes(x = long, y = lat)
 print(p2)
 ```
 
-![plot of chunk mapIt](/mlab/data/rmflight/Documents/researchBlog/researchBlog/img/mapIt.png) 
+![plot of chunk mapIt](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/mapIt.png) 
 
 
 ### How far??
@@ -212,7 +212,7 @@ ggplot(plotDistPerc, aes(x = logDist, y = population)) + geom_point() + xlab("Lo
     ylab("% Population")
 ```
 
-![plot of chunk percPopulation](/mlab/data/rmflight/Documents/researchBlog/researchBlog/img/percPopulation.png) 
+![plot of chunk percPopulation](/home/rmflight/Projects/personal/researchBlog/researchBlog/img/percPopulation.png) 
 
 
 What gets really interesting, is how much of the population lives within a given distance of a Timmys. By summing up the percentage of the population within given distances. The plot above shows that 50% of the population is within 316.2278 **meters** of a Tim Hortons location. 
