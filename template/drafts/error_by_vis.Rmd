@@ -1,0 +1,96 @@
+% visualization, error
+
+# Error Structure by Visualization
+
+There are often different types of error structures in our data that we don't know about. Visualization can often be a means to detecting them. Here I review a visualization method and how different error structure appears in the visualization.
+
+```{r define_functions}
+library(ggplot2)
+add_uniform_noise <- function(n_rep, value, sd){
+  out_data <- matrix(0, length(value), n_rep)
+  for (i_value in seq_along(value)){
+    out_data[i_value, ] <- rnorm(n_rep, value[i_value], sd)
+  }
+  out_data
+}
+
+add_prop_noise <- function(n_rep, value, sd){
+  out_data <- matrix(0, length(value), n_rep)
+  for (i_value in seq_along(value)){
+    out_data[i_value, ] <- rnorm(n_rep, value[i_value], value[i_value]*sd)
+  }
+  out_data
+}
+
+add_prop_uniform <- function(n_rep, value, u_sd, p_sd){
+    add_uniform_noise(n_rep, value, u_sd) + add_prop_noise(n_rep, value, p_sd)
+}
+
+summarize_data <- function(in_data, avg_function = mean){
+  mean_val <- apply(in_data, 1, avg_function)
+  sd_val <- apply(in_data, 1, sd)
+  
+  out_data <- data.frame(mean = mean_val, sd = sd_val, rsd = sd_val / mean_val)
+}
+```
+
+
+```{r base_data}
+# want 100 samples, with 1000 things in each. 
+set.seed(1234)
+n_point <- 1000
+init_values <- runif(n_point, 1, 20)
+```
+
+
+## Error Types
+
+### Uniform
+
+All the same type of error at all values
+
+### Additive
+
+What we normally expect to see, really is a type of **uniform**
+
+```{r additive_data}
+n_rep <- 100
+
+add_data <- add_uniform_noise(n_rep, init_values, 0.2)
+```
+
+```{r get_stats}
+add_summary <- summarize_data(add_data)
+ggplot(add_summary, aes(x = mean, y = sd)) + geom_point() + ggtitle("additive SD")
+
+ggplot(add_summary, aes(x = mean, y = rsd)) + geom_point() + ggtitle("additive RSD")
+
+add_data_log <- log(add_data)
+add_log_summary <- summarize_data(add_data_log)
+ggplot(add_log_summary, aes(x = mean, y = sd)) + geom_point() + ggtitle("log additive SD")
+```
+
+### Proportional
+
+Increasing variance with signal, this is not uniform, but is heteroscedastic. Breaks most statistical methods.
+
+```{r proportional_data}
+prop_data <- add_prop_noise(n_rep, init_values, 0.01)
+prop_summary <- summarize_data(prop_data)
+ggplot(prop_summary, aes(x = mean, y = sd)) + geom_point() + ggtitle("proportional SD")
+ggplot(prop_summary, aes(x = mean, y = rsd)) + geom_point() + ggtitle("proportional RSD")
+
+prop_log <- log(prop_data)
+prop_ls <- summarize_data(prop_log)
+ggplot(prop_ls, aes(x = mean, y = sd)) + geom_point() + ggtitle("log proportional SD")
+```
+
+### Mixed
+
+```{r mixed_error}
+mix_data <- add_prop_uniform(100, init_values, 0.2, 0.1)
+mix_summary <- summarize_data(mix_data)
+ggplot(mix_summary, aes(x = mean, y = sd)) + geom_point() + ggtitle("mixed SD")
+ggplot(mix_summary, aes(x = mean, y = rsd)) + geom_point() + ggtitle("mixed RSD")
+```
+
