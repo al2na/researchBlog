@@ -7,6 +7,108 @@
     <category>data</category>
     <category>bioinformatics</category>
     <category>open science</category>
+    <item><title>Mouse / Human Transcriptomics and Batch Effects</title><link>http://rmflight.github.io/posts/2015/06/mouse_human_transcriptomics.html</link><category>openscience</category><description>&lt;h1&gt;Mouse / Human Transcriptomics and Batch Effects&lt;/h1&gt;
+
+&lt;h2&gt;TL;DR&lt;/h2&gt;
+
+&lt;p&gt;This &lt;a href=&quot;http://dx.doi.org/10.1073/pnas.1413624111&quot;&gt;2014 PNAS paper by S. Lin et al (Lin et al., PNAS, 2014)&lt;/a&gt; that compares transcription of tissues between species has a flawed experimental design, where species is almost perfectly confounded with machine / lane on which the sequencing was done. Y. Golad and O. Mizrahi-Man have &lt;a href=&quot;http://f1000research.com/articles/4-121/v1&quot;&gt;published a manuscript&lt;/a&gt; describing the confounding and the results of removing it. This was possible because the original authors supplied the information about which publically available files were used in the original analysis. The data from this experiment is probably only suitable as an example of what not to do in high-throughput biology experimental design, and that there &lt;em&gt;may&lt;/em&gt; be similarities in human and mouse transcriptional programs.&lt;/p&gt;
+
+&lt;p&gt;We discussed these papers in the Systems Biology and Omics Integration University of Kentucky Journal Club on June 1, 2015. I lead that discussion.&lt;/p&gt;
+
+&lt;h2&gt;Mouse / Human Transcriptomic Differences&lt;/h2&gt;
+
+&lt;p&gt;In 2014, two papers were published by members of the ENCODE project purporting that tissue gene expression clustered more by species than by tissue. In the first (&lt;a href=&quot;http://www.nature.com/nature/journal/v515/n7527/full/nature13992.html&quot;&gt;ENCODE Consortium, Nature, 2014, doi:10.1038/nature13992 2014&lt;/a&gt;), a large number of experiments were combined and compared. &lt;a href=&quot;http://www.nature.com/nature/journal/v515/n7527/fig_tab/nature13992_F2.html&quot;&gt;Figure 2a&lt;/a&gt; shows a PCA plot of expression in across 10 tissues in human and mouse.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.nature.com/nature/journal/v515/n7527/images/nature13992-f2.jpg&quot; alt=&quot;ENCODE paper figuer 2&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly enough, if you collapse PC1 (definitely species), then the tissues start to look quite similar. Which does not seem that unexpected, there are species specific differences, but the tissues are doing something similar in each species.&lt;/p&gt;
+
+&lt;p&gt;This was not the end of the story, however. A subsequent publication (&lt;a href=&quot;http://www.pnas.org/content/111/48/17224&quot;&gt;S Lin et al., PNAS, 2014, doi: 10.1073/pnas.1413624111&lt;/a&gt;) went further in doing fresh sequencing of 13 tissues in both species, still showing bigger differences between species than between tissues.&lt;/p&gt;
+
+&lt;h2&gt;Is Everything As it Seems?&lt;/h2&gt;
+
+&lt;p&gt;On April 28, Y. Golad sent out this tweet:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;We reanalyzed the data from &lt;a href=&quot;http://t.co/Fv7z9WwLJ4&quot;&gt;http://t.co/Fv7z9WwLJ4&lt;/a&gt; and found the following: &lt;a href=&quot;http://t.co/37eVs8Kln9&quot;&gt;pic.twitter.com/37eVs8Kln9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yoav Gilad (@Y_Gilad) &lt;a href=&quot;https://twitter.com/Y_Gilad/status/593088451462963202&quot;&gt;April 28, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;http://rmflight.github.io//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The left figure shows the original data, clustering by species, and on the right, reprocessed data, clustering by tissue. Now, I have to admit when he posted this I was kind of ticked off. Where was the blog-post or manuscript showing what exactly was done? If you look at the comments to Yoav on that tweet, it seems others were wondering the same thing. Thankfully, on May 19, the manuscript hit &lt;a href=&quot;http://f1000research.com/articles/4-121/v1&quot;&gt;F1000Research (Gilad Y and Mizrahi-Man O. A reanalysis of mouse ENCODE comparative gene expression data [v1; ref status: approved with reservations 1, http://f1000r.es/5ez] F1000Research 2015, 4:121 (doi: 10.12688/f1000research.6536.1))&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Batch Effects&lt;/h2&gt;
+
+&lt;p&gt;Yoav asked for the list of data files that were used in the PNAS paper, and then examined the read id line to extract the experimental design. This experimental design is captured in Figure 1:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://f1000researchdata.s3.amazonaws.com/manuscripts/7019/9f5f4330-d81d-46b8-9a3f-d8cb7aaf577e_figure1.gif&quot; alt=&quot;Y Golad Fig 1&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you notice a problem with this design?&lt;/p&gt;
+
+&lt;p&gt;. 
+.
+.
+.
+.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you noticed that species (one of the main effects to investigate) is not randomly or even semi-randomly distributed across sequencers and / or lanes, but is almost perfectly confounded with sequencer / lane. It doesn&amp;#39;t matter if one technician handled all the samples, this is potentially a large batch effect / confounding variable. &lt;/p&gt;
+
+&lt;p&gt;And Yoav shows that ignoring the batch effect produces data much like that reported in the Lin et al PNAS pub, while removing the batch effect using &lt;a href=&quot;http://bioinformatics.oxfordjournals.org/content/28/6/882&quot;&gt;ComBat&lt;/a&gt; results in the tissues clustering together.&lt;/p&gt;
+
+&lt;h2&gt;Is the Data Still Useful?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1_yA8RHdfodOV-5IoR-yb317KwaWgXFAvJntaIm8HYaU/edit?usp=sharing&quot;&gt;I presented&lt;/a&gt; these papers and the discussion around them at our weekly Systems Biology and Omics Integration (&lt;a href=&quot;http://sboi.bioinformatics.uky.edu&quot;&gt;SBOI&lt;/a&gt;) Journal Club on June 1, 2015. There were a couple of concerns with the overall study:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is ENCODE data still useful?
+
+&lt;ul&gt;
+&lt;li&gt;some people seemed to be concerned that this brought the general ENCODE project into question. I think by the end we agreed that in general it is probably ok to be using ENCODE data, but this particular study was questionable.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What does the data tell us?
+
+&lt;ul&gt;
+&lt;li&gt;based on the correction that Yoav did and reanalysis, is there anything actually telling in the data? Unfortunately, because species is so confounded with machine, I don&amp;#39;t think there is much of a conclusion to draw about species differences &lt;em&gt;vs&lt;/em&gt; tissue similarity based on this data. There was some disagreement on this point.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Full experimental designs should be published, and requested by reviewers
+
+&lt;ul&gt;
+&lt;li&gt;Really, why a reviewer on the paper &lt;strong&gt;did not&lt;/strong&gt; request more information about the experimental design is beyond me, especially given the claims of the manuscript. Why it is not the norm to provide this kind of experimental design information in a manuscript is also a good question. &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally, I think the best use of the 2014 PNAS pub and this dataset is an example of &lt;strong&gt;how not&lt;/strong&gt; to design a biological experiment.&lt;/p&gt;
+</description></item>
+    <item><title>First Open Post-Publication Peer Review, with Credit!</title><link>http://rmflight.github.io/posts/2015/03/openpeerreview.html</link><category>openscience</category><description>&lt;h1&gt;First Open Post-Publication Peer Review, with Credit!&lt;/h1&gt;
+
+&lt;h2&gt;TL;DR&lt;/h2&gt;
+
+&lt;p&gt;Reviewed &lt;a href=&quot;https://twitter.com/@biodataganache&quot;&gt;Jason McDermott&amp;#39;s&lt;/a&gt; &lt;a href=&quot;http://f1000research.com/articles/4-60/v1&quot;&gt;MDRPred paper&lt;/a&gt; on F1000Research!, where my review is posted along side the paper, &lt;a href=&quot;http://f1000research.com/articles/4-60/v1#referee-response-7889&quot;&gt;with a DOI&lt;/a&gt;, completely in the open with my name attached. Was a pleasant experience, aided by the fact that Jason wrote a good paper.&lt;/p&gt;
+
+&lt;h2&gt;F1000Research!&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://f1000research.com/&quot;&gt;F1000Research!&lt;/a&gt; is a new publishing startup from F1000 that has a model of post-publication peer review, whereby upon submission the manuscript undergoes basic quality checks (no real editorial control), and then is published. Once the article is published, reviewers are invited to review, and they have 10 days to submit their review. Reviews are signed, and given a DOI. Reviewers are asked to assign one of &lt;strong&gt;Approved&lt;/strong&gt;, &lt;strong&gt;Approved with Reservations&lt;/strong&gt;, &lt;strong&gt;Not Approved&lt;/strong&gt; status to the article.&lt;/p&gt;
+
+&lt;p&gt;When the article gets two revieweres giving &lt;strong&gt;Approved&lt;/strong&gt; status (likely after at least one round of review and resubmission), then it will be submitted to PubMed for indexing. &lt;/p&gt;
+
+&lt;h2&gt;How Did I End Up Reviewing This??&lt;/h2&gt;
+
+&lt;p&gt;Long story short, I&amp;#39;ve been following Jason on twitter for a while, and I happened to see him tweet and blog about trying to get an F1000Research article up as a citeable supporting publication for a grant going in. I thought it was a nifty idea, and although I actually at the time did not have much of an idea of what Jason&amp;#39;s research actually involved, communicated with him that when the article went live I would be willing to be recommended as a reviewer. Imagine my surprise that I actually had enough domain knowledge that I could actually review the article. &lt;/p&gt;
+
+&lt;p&gt;That is saying something, given that the paper has a neat combination of genetic algorithms, regular expressions, and protein function prediction (really, you should go give it a read). By the way, this is also the first paper I&amp;#39;ve reviewed in a long time that did not have serious methodological problems, or where claims are made with no substantiation, and I could not identify any serious statistical issues.&lt;/p&gt;
+
+&lt;h2&gt;The Open Part&lt;/h2&gt;
+
+&lt;p&gt;Although I don&amp;#39;t do a lot of reviewing, I had to admit that this was one of the best reviewing assignments I&amp;#39;ve had in a while. Although I believe that peer review is essential to science, and it needs to be more open (I&amp;#39;ve started signing my reviews for other journals), this was the first time I knew my review was open (my name would be known to the authors&amp;#39; by default) and public. I have to say that this likely improved the care and thoroughness in doing the actual review as I went through the article, given that both the authors and anyone else who comes across the article and my review can see if the issues I raise are real, or if I&amp;#39;m trying to make myself look good. And my name will be publicly associated with it!&lt;/p&gt;
+
+&lt;p&gt;Note that this &lt;strong&gt;openness&lt;/strong&gt; did not keep me from criticizing particular aspects of the paper. There are lots of things that need to be changed in the article before I will give it an &lt;strong&gt;Approved&lt;/strong&gt; status, and I laid those out in my review.&lt;/p&gt;
+
+&lt;h2&gt;PostPublication&lt;/h2&gt;
+
+&lt;p&gt;I really appreciated that I get to review a &lt;strong&gt;published&lt;/strong&gt; article, because it means that the whole thing is typeset, figures and tables are in their logical place (not at the end of the document!!!), the line spacing is readable, etc. Note to other publishers, at least let authors put the figures in-line for review if you are not going to type-set the article before it goes to reviewers.&lt;/p&gt;
+
+&lt;h2&gt;Disclaimers&lt;/h2&gt;
+
+&lt;p&gt;I was given an F1000Research! t-shirt as a reward for commenting on a &lt;a href=&quot;http://blog.f1000research.com/2013/08/23/peer-review-credit-where-credits-due/#comment-1020559658&quot;&gt;blog-post&lt;/a&gt; regarding incentives for peer-review. I like the shirt. Having done my review, I am also eligible to get a 50% discount on the article processing charges if I submit an article to F1000Research in the next 12 months.&lt;/p&gt;
+</description></item>
     <item><title>Being a PhD Student and PostDoc with Migraines</title><link>http://rmflight.github.io/posts/2014/12/migraine_phdisabled.html</link><category>phdisabled</category><category>migraines</category><description>&lt;h1&gt;Being a PhD Student and PostDoc with Migraines&lt;/h1&gt;
 
 &lt;p&gt;A blog post on the &lt;a href=&quot;http://jabberwocky.weecology.org/2014/10/13/how-technology-can-help-scientists-with-chronic-illnesses-or-technology-ftw/&quot;&gt;Weecology group blog&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/elitabaldridge&quot;&gt;Elita Baldridge&lt;/a&gt; on being a PhD student with fibromyalgia, and how they are working through that, caused me to pause and reflect on my experience as a PhD student and PostDoc with migraines. For those who haven&amp;#39;t read my blog, I do research in bioinformatics, specifically in transcriptomics and metabolomics. I spend almost all of my research hours in front of a computer writing code, generating plots, and trying to make sense of -omics level data.&lt;/p&gt;
