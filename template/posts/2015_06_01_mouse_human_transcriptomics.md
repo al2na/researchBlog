@@ -20,7 +20,7 @@ This was not the end of the story, however. A subsequent publication ([S Lin et 
 
 ## Is Everything As it Seems?
 
-On April 28, Y. Golad sent out this tweet:
+On April 28, Y. Gilad sent out this tweet:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">We reanalyzed the data from <a href="http://t.co/Fv7z9WwLJ4">http://t.co/Fv7z9WwLJ4</a> and found the following: <a href="http://t.co/37eVs8Kln9">pic.twitter.com/37eVs8Kln9</a></p>&mdash; Yoav Gilad (@Y_Gilad) <a href="https://twitter.com/Y_Gilad/status/593088451462963202">April 28, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -60,7 +60,7 @@ Finally, I think the best use of the 2014 PNAS pub and this dataset is an exampl
 
 ## <a id="addendum"></a> Addendum 
 
-As I looked at the comment section of the Goav & Man article yesterday, I noticed that there were direct replies from S. Lin in a couple of places. In particular is a comment that Lin et al did a second set of sequencing with a new design, and reanalysed the data. Links are provided to two figures, a table of the new design and a new 3D PCA plot:
+As I looked at the comment section of the Gilad & Man article yesterday (June 1, 2015), I noticed that there were direct replies from S. Lin in a couple of places. In particular is a comment that Lin et al did a second set of sequencing with a new design, and reanalysed the data. Links are provided to two figures, a table of the new design and a new 3D PCA plot:
 
 ![new design](/home/rmflight/Projects/personal/researchBlog/figure/slin_table1part2.jpg)
 
