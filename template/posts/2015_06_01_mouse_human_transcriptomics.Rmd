@@ -62,8 +62,8 @@ Finally, I think the best use of the 2014 PNAS pub and this dataset is an exampl
 
 As I looked at the comment section of the Goav & Man article yesterday, I noticed that there were direct replies from S. Lin in a couple of places. In particular is a comment that Lin et al did a second set of sequencing with a new design, and reanalysed the data. Links are provided to two figures, a table of the new design and a new 3D PCA plot:
 
-![new design](figure/slin_tabl1part2.jpg)
+![new design](/home/rmflight/Projects/personal/researchBlog/figure/slin_table1part2.jpg)
 
-![new pca](figure/slin_fig1part2.jpg)
+![new pca](/home/rmflight/Projects/personal/researchBlog/figure/slin_fig1part2.jpg)
 
 The new sequencing design seems much more reasonable, and the PCA plot has many characteristics of the original one from the original comparative analysis by Mouse ENCODE (see above), in that yes, there are species specific differences, but there also appears to be a way to collapse along PC2 and PC3 where the tissues will line up with each other, which I kind of would expect.
