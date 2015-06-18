@@ -12,12 +12,12 @@
 "urls": "posts/2012/07/customAffyCDF.html" 
 },
 "openscience": {
- "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Open VS Closed Analysis Languages", "PubmedCommons API", "Installing MatLab vs Installing R", "Researcher Discoverability", "First Open Post-Publication Peer Review, with Credit!", "Mouse / Human Transcriptomics and Batch Effects" ],
-"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html", "posts/2013/10/openvsclosed.html", "posts/2013/10/pubmedComonsAPI.html", "posts/2014/02/installingRMatlab.html", "posts/2014/06/openscience_vs_knode.html", "posts/2015/03/openpeerreview.html", "posts/2015/06/mouse_human_transcriptomics.html" ] 
+ "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Open VS Closed Analysis Languages", "PubmedCommons API", "Installing MatLab vs Installing R", "Researcher Discoverability", "First Open Post-Publication Peer Review, with Credit!", "Mouse / Human Transcriptomics and Batch Effects", "Novel Zinc Coordination Geometries" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html", "posts/2013/10/openvsclosed.html", "posts/2013/10/pubmedComonsAPI.html", "posts/2014/02/installingRMatlab.html", "posts/2014/06/openscience_vs_knode.html", "posts/2015/03/openpeerreview.html", "posts/2015/06/mouse_human_transcriptomics.html", "posts/2015/06/zinc_coordination.html" ] 
 },
 "reproducibility": {
- "titles": [ "Writing papers using R Markdown", "Reproducible Methods" ],
-"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html" ] 
+ "titles": [ "Writing papers using R Markdown", "Reproducible Methods", "Novel Zinc Coordination Geometries" ],
+"urls": [ "posts/2012/10/papersinRmd.html", "posts/2013/08/reproducible_methods.html", "posts/2015/06/zinc_coordination.html" ] 
 },
 "tutorial": {
  "titles": [ "Writing papers using R Markdown", "Using Samatha" ],
@@ -186,5 +186,13 @@
 "migraines": {
  "titles": "Being a PhD Student and PostDoc with Migraines",
 "urls": "posts/2014/12/migraine_phdisabled.html" 
+},
+"zinc": {
+ "titles": "Novel Zinc Coordination Geometries",
+"urls": "posts/2015/06/zinc_coordination.html" 
+},
+"visualization": {
+ "titles": "Novel Zinc Coordination Geometries",
+"urls": "posts/2015/06/zinc_coordination.html" 
 } 
 }
