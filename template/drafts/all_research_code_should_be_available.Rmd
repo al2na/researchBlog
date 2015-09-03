@@ -1,0 +1,12 @@
+
+# All Research Code Should be Available
+
+A little while ago I put out this tweet:
+
+embed tweet on every paper should have a github repo
+
+What I should have sent was this tweet:
+
+Should have accessible, properly licensed code
+
+What prompted this? - Paper on including meta-data notes that they implemented in C, but no link to code anywhere in the manuscript.

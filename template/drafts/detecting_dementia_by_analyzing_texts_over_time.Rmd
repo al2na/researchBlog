@@ -1,0 +1,6 @@
+
+# Detecting Dementia by Longitudinal Texts
+
+A lot of people don't write much, but there are two groups of people who write a lot: scientists, and programmers. Could we use machine learning to detect the onset of dementia in individuals in these groups based on their public writing?
+
+I don't have time or ability to do this, but hopefully this will reach someone who does.
