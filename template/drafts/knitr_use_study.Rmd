@@ -1,0 +1,7 @@
+# Examine Use of Knitr in R Vignettes
+
+## Introduction
+
+## Methods
+
+## Data

@@ -1,0 +1,17 @@
+% R, knitr, preregistration
+
+# Layout Analysis in Advance
+
+I have had an idea to examine the use of [`knitr`](knitrlink) Rmd vignettes in CRAN and Bioconductor `R` packages for a while. I have even mirrored CRAN and exported the SVN logs from Bioconductor a couple of times in hopes of actually starting the analysis, but that has yet to happen. However, I have given a lot of thought to what data to use, and how to do the actual analysis. Below I am going to draft the relevant sections of the actual report, for two reasons:
+
+  1 Motivate myself to actually do the analysis
+  2 Provide information on the study that may attract collaborators who may want to help (hint hint)
+  3 Essentially pre-register the data, methods, and experimental design
+
+# Examine Use of Knitr in R Vignettes
+
+## Introduction
+
+## Methods
+
+## Data
