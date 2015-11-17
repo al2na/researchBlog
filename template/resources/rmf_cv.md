@@ -34,7 +34,7 @@ My primary research interests are in the areas where biology, chemistry, and com
 ## Professional Experience
 
 * 2014 - Present: **Research Associate, Senior**, University of Kentucky
-* 2013 - Present: **PostDoctoral Research Associate**, University of Kentucky
+* 2013 - 2014: **PostDoctoral Research Associate**, University of Kentucky
 * 2010 - 2013: **PostDoctoral Research Associate**, University of Louisville
 * 2009 - 2010: **Research Assistanct**, University of Dalhousie
 * 2004 - 2009: **Graduate Research / Teaching Assistant**, Dalhousie University
