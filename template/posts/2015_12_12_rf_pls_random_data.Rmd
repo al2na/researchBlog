@@ -112,7 +112,7 @@ out of bag (OOB) samples:
 knitr::kable(rf_model$confusion)
 ```
 
-And an overall error of `r rf_model$err.rate`.
+And an overall error of `r mean(rf_model$err.rate)`.
 
 ## PLS-DA
 
@@ -198,3 +198,8 @@ not actually that good, and we should be cautious of any predictions being made.
 
 Of course, the PCA at the beginning of the analysis shows that there is no *real*
 separation in the data in the first place. 
+
+```{r session_info}
+devtools::session_info()
+```
+
