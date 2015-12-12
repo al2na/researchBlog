@@ -158,7 +158,14 @@ gen_cv <- function(xdata, ydata, nrep, kfold){
 }
 
 plsda_cv <- function(xtrain, ytrain, xtest, ytest){
+  pls_model <- plsda(xtrain, ytrain, ncomp = 2)
+  pls_pred <- predict(pls_model, xtest, type = "prob")
   
+  use_pred <- pls_pred[, 1, 1]
+  
+  pred_perf <- ROCR::prediction(use_pred, ytest)
+  pred_auc <- ROCR::performance(pred_perf, "auc")@y.values[[1]]
+  return(pred_auc)
 }
 ```
 
