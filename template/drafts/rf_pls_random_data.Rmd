@@ -38,6 +38,7 @@ is from a uniform distribution with a range of 1-10000.
 
 ```{r initial_values}
 library(cowplot)
+library(fakeDataWithError)
 set.seed(1234)
 n_point <- 1000
 max_value <- 10000
