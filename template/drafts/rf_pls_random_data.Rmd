@@ -124,5 +124,41 @@ you suspect it?
 
 ## Cross-validated PLS-DA
 
-Of course, one way to truly assess the worth of the model would be to use cross-validation,
-where a fraction of data is held back, and the model trained on the rest.
+Of course, one way to truly assess the worth of the model would be to use
+cross-validation, where a fraction of data is held back, and the model trained
+on the rest. Predictions are then made on the held back fraction, and because we
+know the truth, we will then calculate the **area under the reciever operator curve**
+(AUROC) or area under the curve (AUC) created by plotting true positives *vs* 
+false positives.
+
+To do this we will need two functions:
+
+1. Generates all of the CV folds
+2. Generates PLS-DA model, does prediction on hold out, calculates AUC
+
+```{r cv_plsda}
+library(cvTools)
+library(ROCR)
+
+gen_cv <- function(xdata, ydata, nrep, kfold){
+  n_sample <- length(ydata)
+  all_index <- seq(1, n_sample)
+  cv_data <- cvFolds(n_sample, K = kfold, R = nrep, type = "random")
+  
+  rep_values <- vapply(seq(1, nrep), function(in_rep){
+    use_rep <- cv_data$subsets[, in_rep]
+    cv_values <- vapply(seq(1, kfold), function(in_fold){
+      test_index <- use_rep[cv_data$which == in_fold]
+      train_index <- all_index[-test_index]
+      
+      plsda_cv(xdata[train_index, ], ydata[train_index], xdata[test_index, ],
+               ydata[test_index])
+    }, numeric(1))
+  }, numeric(kfold))
+}
+
+plsda_cv <- function(xtrain, ytrain, xtest, ytest){
+  
+}
+```
+
