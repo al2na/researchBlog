@@ -59,6 +59,15 @@ n_sample <- 100
 error_values <- add_uniform_noise(n_sample, init_values, 200)
 ```
 
+Just for information, the `add_uniform_noise` function is this:
+
+```{r add_noise_func}
+add_uniform_noise
+```
+
+I created it as part of a package that is able to add different kinds of noise
+to data.
+
 ```{r plot_error}
 error_data <- data.frame(feature_1 = error_values[1,])
 ggplot(error_data, aes(x = feature_1)) + geom_histogram() + ggtitle("Error Data")
