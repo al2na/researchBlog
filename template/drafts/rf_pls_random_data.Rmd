@@ -170,7 +170,7 @@ plsda_cv <- function(xtrain, ytrain, xtest, ytest){
   pls_model <- plsda(xtrain, ytrain, ncomp = 2)
   pls_pred <- predict(pls_model, xtest, type = "prob")
   
-  use_pred <- pls_pred[, 1, 1]
+  use_pred <- pls_pred[, 2, 1]
   
   pred_perf <- ROCR::prediction(use_pred, ytest)
   pred_auc <- ROCR::performance(pred_perf, "auc")@y.values[[1]]
@@ -178,3 +178,21 @@ plsda_cv <- function(xtrain, ytrain, xtest, ytest){
 }
 ```
 
+And now lets do a bunch of replicates (100).
+
+```{r rep_plsda}
+cv_vals <- gen_cv(t(error_values), factor(sample_class), nrep = 100, kfold = 5)
+
+mean(cv_vals)
+sd(cv_vals)
+
+cv_frame <- data.frame(auc = as.vector(cv_vals))
+ggplot(cv_frame, aes(x = auc)) + geom_histogram(binwidth = 0.01)
+```
+
+So we get an average AUC of `r mean(cv_vals)`, which is pretty awful. This implies
+that even though there was good separation on the scores, maybe the model is
+not actually that good, and we should be cautious of any predictions being made.
+
+Of course, the PCA at the beginning of the analysis shows that there is no *real*
+separation in the data in the first place. 
