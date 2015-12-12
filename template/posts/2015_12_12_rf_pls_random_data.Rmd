@@ -1,4 +1,4 @@
-% R, random forest, pls
+% R, randomforest, pls
 
 # Random Forest vs PLS on Random Data
 
