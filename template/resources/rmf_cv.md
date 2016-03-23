@@ -5,6 +5,8 @@
 * [Twitter](https://twitter.com/rmflight)
 * Email: rflight79 `near` gmail `circular shape` com
 * [Github](https://github.com/rmflight)
+* [ORCID: 0000-0001-8141-7788](http://orcid.org/0000-0001-8141-7788)
+* [Europe PMC](https://europepmc.org/authors/0000-0001-8141-7788)
 
 ### Mailing
 
