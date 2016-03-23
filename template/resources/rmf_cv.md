@@ -7,6 +7,7 @@
 * [Github](https://github.com/rmflight)
 * [ORCID: 0000-0001-8141-7788](http://orcid.org/0000-0001-8141-7788)
 * [Europe PMC](https://europepmc.org/authors/0000-0001-8141-7788)
+* [Google Scholar](https://scholar.google.com/citations?hl=en&user=G8bFNwYAAAAJ&view_op=list_works&sortby=pubdate)
 
 ### Mailing
 
